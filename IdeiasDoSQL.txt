@@ -1,0 +1,15 @@
+Pontos do brModelo:
+	Não temos o tipo Serial para colocar em todas as chaves "id" que criamos, então temporariamente foram definidas como Integer.
+	Não temos também o tipo Text, mas isso não é problema porque usamos um Varchar. O problema acontece quando queremos criar um limite para o varchar, que não é possível pelo brmodelo.
+		Exemplo: "Telefone" poderia ser um varchar com um tamanho de 14
+	Colocamos "Senha" (tabela Portal) como varchar. Podemos guardar em plaintext ou usar uma encriptação onde só guardamos o hash (desejável)
+	"Entrada" (tabela Atividade) poderia ser um boolean se mudássemos pra Atividade Gratuita (sim/não)
+		Além disso, "Duracao" está como varchar, mas poderia ser int (só definir se é em minutos, horas, o que)
+	?"MEC" como integer, pq não sei o que isso vai ser?
+	Pra lidar com campos "Valor", estaremos usando o tipo Numeric, pq parece o certo
+	?"Minicurrículo" (tabela Palestra), qual deveria ser o tipo? Coloquei blob
+	?Tabela Concurso: "Regras" e "Premiacoes", que tipo seriam? Coloquei varchar mas parece bosta?
+	?"Horario Inicio" e "Horario Fim" estão como varchar, mas né?
+	?"Chave de acesso" (tabela Nota Fiscal), coloquei varchar, mas não sei como é a identifição da nota?
+
+
