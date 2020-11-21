@@ -7,3 +7,9 @@
 **Anúncio Online**: agora o _Evento_ pode criar anúncios online para atrair público. Cada anúncio possui um título, descrição e uma URL, ao qual o usuário é direcionado quando clica no anúncio. Esse anúncio é publicado em uma **RedeSocial**, que é registrada com um nome, descrição e URL principal, além de um ícone para identificá-la.
 
 **Perfil na Rede Social**: para alavancar ainda mais a divulgação do _Evento_, agora é possível que o mesmo possui um perfil oficial em qualquer rede social. Esse _Perfil_ é registrado com o nome, URL da página dentro da rede social, e também um contador do número de seguidores. Um _GrupoMusical_ também pode registrar seu _Perfil_, que forma que o _GrupoMusical_ pode ganhar visibilidade ao ter suas músicas tocadas no evento.
+
+**Transfer**: por meio de um _Transfer_, agora um _LocalFísica_ consegue se conectar a **Estações de Metrô**, **Hotéis** e **Restaurantes**. Isso dá uma comodidade maior aos participantes do _Evento_, que podem tanto sair destes lugares para chegar no _Evento_, ou então visitá-los a partir do _Evento_.
+
+O _Transfer_ possui um horário de início e de fim. Durante este horário, o _Transfer_ realizará o trajeto completo a cada dado intervalo. O _Transfer_ é feito usando um **Veículo**, que pode é registrado com nome, descrição, tipo e ano.
+
+A _Estações de Metrô_, _Hotéis_ e _Restaurantes_ são generalizados para uma entidade chamada **Ponto de Transporte**, que facilita a modelagem para indicar que o _Transfer_ é capaz de chegar a qualquer um destes lugares sem precisar ficar criando uma relacionamento para cada lugar.
