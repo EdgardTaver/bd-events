@@ -1,4 +1,3 @@
-/* Lógico_2: */
 
 CREATE TABLE Evento (
     idEvento SERIAL PRIMARY KEY,
