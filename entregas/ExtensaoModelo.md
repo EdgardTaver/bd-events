@@ -1,5 +1,16 @@
 # Extensão do Modelo
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
+---
+
 ## Divulgação
 
 Para atrair público, o evento pode se valer de **Anúncios Online**. Cada anúncio possui um título, descrição e uma URL, a qual o usuário é direcionado quando clica no anúncio. Esse anúncio é publicado em uma **Rede Social**, que também deve ser registrada com um nome, descrição e URL principal, além de um ícone para identificá-la.
@@ -33,4 +44,3 @@ Por meio de um **Transfer**, agora um _Local Físico_ consegue se conectar a div
 * Um **Hotel**, com um número de quartos disponíveis e também uma avaliação dada em estrelas.
 
 O _Transfer_ possui um horário de início e de fim. Durante este horário, o _Transfer_ realizará o trajeto completo a cada dado intervalo. Esse trajeto é feito usando um **Veículo**, que é registrado com nome, descrição, tipo e ano.
-
