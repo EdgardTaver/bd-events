@@ -106,7 +106,7 @@ CREATE TABLE Beneficio (
 
 CREATE TABLE Pessoa (
     idPessoa SERIAL PRIMARY KEY,
-    CPF VARCHAR,
+    CPF VARCHAR UNIQUE NOT NULL,
     Nome VARCHAR,
     Telefone VARCHAR,
     Email VARCHAR
