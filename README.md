@@ -2,7 +2,7 @@
 
 ## Tarefas
 
-- [ ] Modelo completo em PDF ou PNG, incluindo extensão.
+- [X] Modelo completo em PDF ou PNG, incluindo extensão.
 - [ ] Extensão do documento de especificação de requisitos (PDF).
 - [ ] Bla bla bla
 
