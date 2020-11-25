@@ -3,8 +3,14 @@
 ## Tarefas
 
 - [X] Modelo completo em PDF ou PNG, incluindo extensão.
-- [ ] Extensão do documento de especificação de requisitos (PDF).
-- [ ] Bla bla bla
+- [X] Extensão do documento de especificação de requisitos (PDF).
+- [ ] Modelo lógico relacional, incluindo extensão.
+- [ ] Backup do banco de dados usando a ferramenta de backup do SGBD.
+- [ ] Script SQL com os comandos DDL de criação de esquema completo do BD.
+- [ ] Comandos DML de inserção de dados nas tabelas.
+- [ ] Cada consulta com o seu enunciado e resolução em SQL deve estar em um arquivo TXT conforme solicitado na especificação do trabalho.
+- [ ] Consulta em vídeo.
+- [ ] CRUD.
 
 ## Modelo
 
