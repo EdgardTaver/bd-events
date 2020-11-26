@@ -4,7 +4,7 @@
 
 - [X] Modelo completo em PDF ou PNG, incluindo extensão.
 - [X] Extensão do documento de especificação de requisitos (PDF).
-- [ ] Modelo lógico relacional, incluindo extensão.
+- [X] Modelo lógico relacional, incluindo extensão.
 - [ ] Backup do banco de dados usando a ferramenta de backup do SGBD.
 - [ ] Script SQL com os comandos DDL de criação de esquema completo do BD.
 - [ ] Comandos DML de inserção de dados nas tabelas.
