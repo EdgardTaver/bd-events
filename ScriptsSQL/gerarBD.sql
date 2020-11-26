@@ -862,7 +862,7 @@ ALTER TABLE PlaylistCompostaPorMusica ADD CONSTRAINT FK_CompostaPor2_1
 ALTER TABLE PlaylistCompostaPorMusica ADD CONSTRAINT FK_CompostaPor2_2
     FOREIGN KEY (fk_Musica_idMusica)
     REFERENCES Musica (idMusica)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
 
 ALTER TABLE PlaylistTocaEmLocalFisico ADD CONSTRAINT FK_Toca_1
     FOREIGN KEY (fk_LocalFisico_fk_Plataforma_idPlataforma)
