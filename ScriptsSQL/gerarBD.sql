@@ -597,7 +597,7 @@ ALTER TABLE ApresentacaoDeArtigo ADD CONSTRAINT FK_ApresentacaoDeArtigo_3
 ALTER TABLE Musica ADD CONSTRAINT FK_Musica_2
     FOREIGN KEY (fk_GrupoMusical_idGrupoMusical)
     REFERENCES GrupoMusical (idGrupoMusical)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
 
 ALTER TABLE AnuncioOnline ADD CONSTRAINT FK_AnuncioOnline_2
     FOREIGN KEY (fk_Evento_idEvento)
@@ -857,7 +857,7 @@ ALTER TABLE SessaoDirigidaPor ADD CONSTRAINT FK_DirigidoPor_2
 ALTER TABLE PlaylistCompostaPorMusica ADD CONSTRAINT FK_CompostaPor2_1
     FOREIGN KEY (fk_Playlist_idPlaylist)
     REFERENCES Playlist (idPlaylist)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
 
 ALTER TABLE PlaylistCompostaPorMusica ADD CONSTRAINT FK_CompostaPor2_2
     FOREIGN KEY (fk_Musica_idMusica)
