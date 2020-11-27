@@ -191,12 +191,6 @@ CREATE TABLE Artigo (
     DOI NUMERIC
 );
 
-CREATE TABLE Sessao (
-    Tipo VARCHAR,
-    Tema VARCHAR,
-    idSessao SERIAL PRIMARY KEY
-);
-
 CREATE TABLE Playlist (
     idPlaylist SERIAL PRIMARY KEY,
     Nome VARCHAR,
@@ -392,13 +386,8 @@ CREATE TABLE EscritoPor (
     fk_Artigo_idArtigo SERIAL
 );
 
-CREATE TABLE CompostoPor2 (
-    fk_Sessao_idSessao SERIAL,
-    fk_ApresentacaoDeArtigo_fk_Atividade_idAtividade SERIAL
-);
-
 CREATE TABLE DirigidoPor (
-    fk_Sessao_idSessao SERIAL,
+    fk_ApresentacaoDeArtigo_idApresentacaoDeArtigo SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
@@ -821,19 +810,9 @@ ALTER TABLE EscritoPor ADD CONSTRAINT FK_EscritoPor_2
     REFERENCES Artigo (idArtigo)
     ON DELETE RESTRICT;
  
-ALTER TABLE CompostoPor2 ADD CONSTRAINT FK_CompostoPor2_1
-    FOREIGN KEY (fk_Sessao_idSessao)
-    REFERENCES Sessao (idSessao)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE CompostoPor2 ADD CONSTRAINT FK_CompostoPor2_2
-    FOREIGN KEY (fk_ApresentacaoDeArtigo_fk_Atividade_idAtividade)
-    REFERENCES ApresentacaoDeArtigo (fk_Atividade_idAtividade)
-    ON DELETE RESTRICT;
- 
 ALTER TABLE DirigidoPor ADD CONSTRAINT FK_DirigidoPor_1
-    FOREIGN KEY (fk_Sessao_idSessao)
-    REFERENCES Sessao (idSessao)
+    FOREIGN KEY (fk_ApresentacaoDeArtigo_idApresentacaoDeArtigo)
+    REFERENCES ApresentacaoDeArtigo (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
  
 ALTER TABLE DirigidoPor ADD CONSTRAINT FK_DirigidoPor_2
