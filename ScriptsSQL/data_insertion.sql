@@ -1,3 +1,69 @@
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (1, '182.368.424-55', 'Alyson Fawley', '+55(83)98316-4101', 'afawley0@tuttocitta.it');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (2, '567.599.204-57', 'Dorey Rennie', '+55(60)91674-0975', 'drennie1@discovery.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (3, '889.924.995-45', 'Conn Lesley', '+55(51)91515-0078', 'clesley2@yellowbook.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (4, '971.820.080-37', 'Pen McCall', '+55(49)92892-4100', 'pmccall3@delicious.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (5, '402.279.939-22', 'Starlin Oakland', '+55(93)99277-3344', 'soakland4@ft.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (6, '450.265.059-78', 'Courtenay Valero', '+55(28)99049-9972', 'cvalero5@thetimes.co.uk');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (7, '084.306.919-71', 'Jerrie Netley', '+55(22)94225-8016', 'jnetley6@hugedomains.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (8, '095.768.427-65', 'Wayne Farrow', '+55(41)99381-9164', 'wfarrow7@example.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (9, '691.599.140-78', 'Duncan Foyster', '+55(94)92099-2114', 'dfoyster8@oracle.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (10, '276.680.258-53', 'Ashien Segeswoeth', '+55(57)96916-3061', 'asegeswoeth9@hostgator.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (11, '069.390.665-65', 'Killy Fitzhenry', '+55(87)93882-8935', 'kfitzhenrya@amazon.co.uk');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (12, '538.615.427-51', 'Ysabel Boyford', '+55(17)94806-2771', 'yboyfordb@guardian.co.uk');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (13, '618.314.649-61', 'Porter Gainsboro', '+55(55)93151-2783', 'pgainsboroc@feedburner.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (14, '806.025.005-22', 'Skippy McGuirk', '+55(55)96595-9022', 'smcguirkd@un.org');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (15, '299.546.749-96', 'Miguel Laise', '+55(03)93345-0070', 'mlaisee@tinyurl.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (16, '252.849.111-31', 'Ronny MacVaugh', '+55(09)97293-3419', 'rmacvaughf@yellowpages.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (17, '896.054.699-55', 'Fritz Sewill', '+55(83)92709-6166', 'fsewillg@time.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (18, '659.815.170-72', 'Aguie Jakobssen', '+55(09)95222-4353', 'ajakobssenh@amazon.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (19, '136.063.421-65', 'Rollins Labrow', '+55(87)90364-9200', 'rlabrowi@nba.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (20, '138.021.200-76', 'Clarabelle Dumbrill', '+55(78)98272-9356', 'cdumbrillj@army.mil');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (21, '187.886.032-74', 'Nelly Shreeves', '+55(54)95865-3661', 'nshreevesk@loc.gov');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (22, '332.192.347-95', 'Cecilius Baglan', '+55(70)94080-1059', 'cbaglanl@ftc.gov');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (23, '760.587.280-26', 'Emerson Eilhertsen', '+55(65)94785-6801', 'eeilhertsenm@huffingtonpost.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (24, '550.452.326-06', 'Nesta Treweela', '+55(23)94950-5743', 'ntreweelan@ed.gov');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (25, '817.316.159-92', 'Priscella Rehm', '+55(16)92155-5112', 'prehmo@globo.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (26, '422.971.717-69', 'Nichole Wilcock', '+55(74)95138-5391', 'nwilcockp@cornell.edu');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (27, '749.147.676-85', 'Jacky Markwell', '+55(76)98148-1257', 'jmarkwellq@smugmug.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (28, '464.233.573-41', 'Annabell Skouling', '+55(85)96478-8075', 'askoulingr@jugem.jp');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (29, '703.223.053-37', 'Marna Wootton', '+55(08)91997-4574', 'mwoottons@aboutads.info');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (30, '987.586.693-33', 'Nils Nolleau', '+55(94)92574-2870', 'nnolleaut@vimeo.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (31, '945.440.404-09', 'Leesa McPike', '+55(19)96215-0639', 'lmcpikeu@canalblog.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (32, '673.989.452-51', 'Georgi Pien', '+55(19)93147-6087', 'gpienv@yale.edu');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (33, '485.482.303-32', 'Calvin Pitone', '+55(71)94513-0728', 'cpitonew@typepad.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (34, '320.244.744-64', 'Saxon Lorentz', '+55(66)99431-7025', 'slorentzx@thetimes.co.uk');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (35, '769.667.259-91', 'Jessalyn Glasscott', '+55(96)95079-4964', 'jglasscotty@oracle.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (36, '982.493.393-18', 'Cirilo Sackett', '+55(17)91983-9753', 'csackettz@businesswire.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (37, '285.126.638-98', 'Conway Ellens', '+55(06)98011-4737', 'cellens10@ftc.gov');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (38, '860.679.269-43', 'Berte Sisnett', '+55(91)99145-5759', 'bsisnett11@jugem.jp');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (39, '945.019.991-34', 'Marne Parlor', '+55(62)94490-1535', 'mparlor12@artisteer.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (40, '225.791.492-16', 'Freedman Gethouse', '+55(42)93449-6778', 'fgethouse13@google.nl');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (41, '064.297.145-44', 'Johan Kuhl', '+55(17)92088-8658', 'jkuhl14@harvard.edu');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (42, '702.346.720-48', 'Damian Castano', '+55(10)94277-7430', 'dcastano15@ocn.ne.jp');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (43, '143.511.523-67', 'Reynard Need', '+55(92)97755-1615', 'rneed16@jiathis.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (44, '712.139.978-80', 'Antonetta Ewart', '+55(51)95632-3229', 'aewart17@reuters.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (45, '407.334.573-61', 'Ana McMechan', '+55(12)91998-1109', 'amcmechan18@senate.gov');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (46, '412.125.755-44', 'Janella Elfleet', '+55(05)97588-5103', 'jelfleet19@trellian.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (47, '810.749.084-70', 'Wang Seivwright', '+55(67)99629-0801', 'wseivwright1a@miibeian.gov.cn');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (48, '849.228.860-84', 'Laurene Godsal', '+55(30)98096-0364', 'lgodsal1b@cnet.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (49, '037.025.891-03', 'Bonnibelle Hagerty', '+55(11)90242-2655', 'bhagerty1c@youtu.be');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (50, '696.998.736-08', 'Arley Evangelinos', '+55(48)91161-7649', 'aevangelinos1d@samsung.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (51, '471.293.995-42', 'Hubey Collens', '+55(79)95432-7706', 'hcollens1e@lulu.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (52, '279.832.740-88', 'Edouard Berkowitz', '+55(70)96535-4454', 'eberkowitz1f@hp.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (53, '715.442.065-72', 'Hobie Cackett', '+55(66)96289-2149', 'hcackett1g@people.com.cn');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (54, '574.394.878-63', 'Emmy Edgin', '+55(61)94874-7213', 'eedgin1h@webs.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (55, '294.880.048-33', 'Harrietta Vidineev', '+55(84)96406-3800', 'hvidineev1i@webs.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (56, '804.090.272-09', 'Sylvester Cuttell', '+55(46)92071-6384', 'scuttell1j@imgur.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (57, '646.110.869-10', 'Cece Gildersleeve', '+55(98)97420-4322', 'cgildersleeve1k@wired.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (58, '081.170.579-35', 'Lavina Crucitti', '+55(12)92486-5538', 'lcrucitti1l@naver.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (59, '487.011.069-00', 'Ruby Kingsland', '+55(86)98184-9666', 'rkingsland1m@prnewswire.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (60, '372.006.833-51', 'Rowland Evennett', '+55(37)97401-9383', 'revennett1n@godaddy.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (61, '674.232.728-64', 'Andrus Castellucci', '+55(61)96834-6032', 'acastellucci1o@nih.gov');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (62, '780.870.926-83', 'Rici Ferroni', '+55(18)98172-6440', 'rferroni1p@posterous.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (63, '089.561.373-47', 'Melinde Tittletross', '+55(82)99878-6986', 'mtittletross1q@gizmodo.com');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (64, '060.840.388-87', 'Annamaria Edinborough', '+55(28)93449-7391', 'aedinborough1r@npr.org');
+insert into pessoa (idpessoa, cpf, nome, telefone, email) values (65, '280.688.880-78', 'Keene Perrett', '+55(35)99610-9451', 'kperrett1s@wufoo.com');
+
 insert into artigo (idatividade, nome, descricao, data, publicoalvo) values (1, 'Turn Left at the End of the World (Sof Ha''Olam Smola)', 'Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', '2019-08-23', 'Civil Engineer');
 insert into artigo (idatividade, nome, descricao, data, publicoalvo) values (2, 'Deeper Shade of Blue, A', 'Nam tristique tortor eu pede.', '2019-03-05', 'Sales Representative');
 insert into artigo (idatividade, nome, descricao, data, publicoalvo) values (3, 'Into Great Silence (Die große Stille)', 'Suspendisse potenti. Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris. Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet.', '2020-11-09', 'Teacher');
@@ -130,6 +196,25 @@ insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transaca
 insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (20, 'boleto', 'mastercard', 375.51, 7.88);
 insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (21, 'credit_card', 'jcb', 176.43, 13.08);
 insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (22, 'boleto', 'diners-club-carte-blanche', 439.28, 10.71);
+
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Vila Mariana', 'Etiam pretium iaculis justo. In hac habitasse platea dictumst.', 1, '14273 Moland Trail');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Consolação', 'Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum.', 2, '75369 Eggendart Hill');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Sé', 'Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', 3, '84 Haas Way');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Pinheiros', 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.', 4, '731 Memorial Point');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Moema', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.', 5, '7313 Florence Point');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Lapa', 'Proin interdum mauris non ligula pellentesque ultrices.', 6, '8 Erie Plaza');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Berrini', 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.', 7, '44609 Lien Lane');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Gutmann Inc', 'Aenean auctor gravida sem.', 8, '7 Main Trail');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Fahey-Murphy', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.', 9, '5853 Sauthoff Way');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Flatley, Cummerata and Ziemann', 'Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', 10, '858 Parkside Crossing');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Zboncak, Nienow and Pacocha', 'Integer ac leo.', 11, '199 Hintze Way');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Lehner Group', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', 12, '47544 Browning Plaza');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Grimes-Okuneva', 'Morbi a ipsum.', 13, '47 Pearson Circle');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Parker Inc', 'Nulla mollis molestie lorem. Quisque ut erat.', 14, '037 Acker Place');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Heller LLC', 'In quis justo. Maecenas rhoncus aliquam lacus.', 15, '927 Lunder Alley');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Simonis, Willms and Rice', 'Mauris sit amet eros.', 16, '4 Waubesa Crossing');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('Nicolas-Pfeffer', 'Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy.', 17, '0201 Stang Park');
+insert into pontodetransporte (nome, descricao, idpontodepartida, endereco) values ('McGlynn, Ward and Nolan', 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.', 18, '6118 Hooker Trail');
 
 -- inserts com fk
 
@@ -390,7 +475,37 @@ insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_event
 insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (39, 'Phased radical infrastructure', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', '2019-04-11', 'Structural Engineer', 3);
 insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (40, 'Right-sized local standardization', 'Phasellus sit amet erat. Nulla tempus.', '2020-05-19', 'Operator', 3);
 
+insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Capital Goods', 5, 5);
+insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Technology', 6, 4);
+insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Consumer Services', 5, 4);
+insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Transportation', 4, 3);
+insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Health Care', 6, 3);
+insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Consumer Services', 2, 1);
 
+insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla.', 'Metal Fabrications', 'Aenean auctor gravida sem.', 1);
+insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Aenean auctor gravida sem.', 'n/a', 'Praesent blandit lacinia erat.', 6);
+insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Nunc purus. Phasellus in felis. Donec semper sapien a libero.', 'Medical/Nursing Services', 'Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.', 6);
+insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Nunc rhoncus dui vel sem.', 'Computer Software: Prepackaged Software', 'Morbi ut odio.', 2);
+insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', 'Industrial Machinery/Components', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.', 2);
+insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Sed sagittis.', 'Paper', 'In hac habitasse platea dictumst.', 4);
+
+insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Training', 'So Much Water', 2);
+insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Services', 'Coco Chanel', 2);
+insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Human Resources', 'Wooden Bridge, The', 5);
+insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Engineering', 'Stand Up and Fight', 2);
+insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Research and Development', 'Rocks in my Pockets', 4);
+
+insert into palestra (afiliacao, nomedapalestra, minicurriculo, fk_atividade_idatividade) values ('Liverpool Hope University College', 'optimize wireless deliverables', 'Nulla mollis molestie lorem. Quisque ut erat.', null);
+insert into palestra (afiliacao, nomedapalestra, minicurriculo, fk_atividade_idatividade) values ('Southern Utah University', 'deliver revolutionary networks', 'Nulla facilisi.', null);
+insert into palestra (afiliacao, nomedapalestra, minicurriculo, fk_atividade_idatividade) values ('Western Carolina University', 'benchmark impactful e-business', 'Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.', null);
+insert into palestra (afiliacao, nomedapalestra, minicurriculo, fk_atividade_idatividade) values ('University of Juba', 'matrix 24/7 e-commerce', 'Maecenas pulvinar lobortis est.', null);
+insert into palestra (afiliacao, nomedapalestra, minicurriculo, fk_atividade_idatividade) values ('Loma Linda University', 'benchmark proactive supply-chains', 'Nulla tempus.', null);
+
+insert into reuniao (objetivo, fk_atividade_idatividade) values ('Profound didactic attitude', 28);
+insert into reuniao (objetivo, fk_atividade_idatividade) values ('Innovative eco-centric pricing structure', 29);
+insert into reuniao (objetivo, fk_atividade_idatividade) values ('Persevering contextually-based software', 30);
+insert into reuniao (objetivo, fk_atividade_idatividade) values ('Synchronised grid-enabled system engine', 31);
+insert into reuniao (objetivo, fk_atividade_idatividade) values ('Down-sized heuristic paradigm', 32);
 
 insert into tutorial (tema, fk_atividade_idatividade) values ('Natural Gas Distribution', 33);
 insert into tutorial (tema, fk_atividade_idatividade) values ('Major Banks', 34);
@@ -403,6 +518,8 @@ insert into workshops (tema, fk_atividade_idatividade) values ('Other Consumer S
 insert into workshops (tema, fk_atividade_idatividade) values ('Human Resources', 38);
 insert into workshops (tema, fk_atividade_idatividade) values ('Real Estate Investment Trusts', 39);
 insert into workshops (tema, fk_atividade_idatividade) values ('Research and Development', 40);
+
+
 
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (1, 'brand seamless applications', 'Fully-configurable logistical system engine', 'https://storify.com/proin/eu/mi/nulla/ac/enim/in.xml', 10251, 0.84, 2);
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (2, 'cultivate proactive initiatives', 'Monitored content-based system engine', 'http://scribd.com/quam/fringilla/rhoncus/mauris/enim/leo.xml', 11508, 0.34, 4);
@@ -419,19 +536,6 @@ insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, cu
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (13, 'incentivize e-business web-readiness', 'Reverse-engineered client-driven challenge', 'http://lycos.com/in/leo/maecenas.json', 5235, 0.98, 3);
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (14, 'envisioneer sticky schemas', 'Quality-focused background array', 'https://privacy.gov.au/porta/volutpat/quam/pede/lobortis/ligula.xml', 10821, 2.98, 5);
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (15, 'cultivate strategic infomediaries', 'Streamlined context-sensitive local area network', 'https://scientificamerican.com/felis/fusce.jpg', 6606, 1.44, 3);
-
-insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Training', 'So Much Water', 2);
-insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Services', 'Coco Chanel', 2);
-insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Human Resources', 'Wooden Bridge, The', 5);
-insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Engineering', 'Stand Up and Fight', 2);
-insert into atividadesocial (tipo, tema, fk_atividade_idatividade) values ('Research and Development', 'Rocks in my Pockets', 4);
-
-insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Capital Goods', 5, 5);
-insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Technology', 6, 4);
-insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Consumer Services', 5, 4);
-insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Transportation', 4, 3);
-insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Health Care', 6, 3);
-insert into apresentacaodeartigo (tema, fk_atividade_idatividade, fk_artigo_idartigo) values ('Consumer Services', 2, 1);
 
 insert into canalstreaming  (idstreaming, titulo, url, fk_portalvirtual_fk_plataforma_idplataforma) values (1, 'Voltsillam', 'https://sfgate.com/nulla/ultrices/aliquet/maecenas.xml', 3);
 insert into canalstreaming  (idstreaming, titulo, url, fk_portalvirtual_fk_plataforma_idplataforma) values (2, 'Zoolab', 'http://reuters.com/risus/auctor/sed/tristique/in.jsp', 4);
@@ -470,13 +574,6 @@ insert into avaliacao (idavaliacao, nota, comentario, data, fk_atividade_idativi
 insert into avaliacao (idavaliacao, nota, comentario, data, fk_atividade_idatividade, fk_evento_idevento, fk_pessoa_idpessoa) values (28, 2, 'Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', '2019-04-19', 2, 6, 5);
 insert into avaliacao (idavaliacao, nota, comentario, data, fk_atividade_idatividade, fk_evento_idevento, fk_pessoa_idpessoa) values (29, 2, 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.', '2020-04-02', 3, 6, 1);
 insert into avaliacao (idavaliacao, nota, comentario, data, fk_atividade_idatividade, fk_evento_idevento, fk_pessoa_idpessoa) values (30, 2, 'Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.', '2020-07-19', 3, 5, 2);
-
-insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla.', 'Metal Fabrications', 'Aenean auctor gravida sem.', 1);
-insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Aenean auctor gravida sem.', 'n/a', 'Praesent blandit lacinia erat.', 6);
-insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Nunc purus. Phasellus in felis. Donec semper sapien a libero.', 'Medical/Nursing Services', 'Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.', 6);
-insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Nunc rhoncus dui vel sem.', 'Computer Software: Prepackaged Software', 'Morbi ut odio.', 2);
-insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.', 'Industrial Machinery/Components', 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.', 2);
-insert into concurso (regras, tema, premiacoes, fk_atividade_idatividade) values ('Sed sagittis.', 'Paper', 'In hac habitasse platea dictumst.', 4);
 
 insert into concursoconcorridopor  (fk_concurso_fk_atividade_idatividade, fk_papel_idpapel) values (6, 6);
 insert into concursoconcorridopor  (fk_concurso_fk_atividade_idatividade, fk_papel_idpapel) values (4, 4);
@@ -599,10 +696,23 @@ insert into entidadepromoveatividade (fk_entidade_identidade, fk_atividade_idati
 insert into entidadepromoveatividade (fk_entidade_identidade, fk_atividade_idatividade) values (20, 29);
 insert into entidadepromoveatividade (fk_entidade_identidade, fk_atividade_idatividade) values (2, 2);
 
-insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 1 azul', 3);
-insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 2 verde', 3);
-insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 3 vermelha', 6);
-insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 4 amarela', 1);
-insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 5 lilas', 3);
-insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 7 rubi', 4);
-insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 9 esmeralda', 2);
+insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 1 azul', 1);
+insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 2 verde', 2);
+insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 3 vermelha', 3);
+insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 4 amarela', 4);
+insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 5 lilas', 5);
+insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 7 rubi', 6);
+insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 9 esmeralda', 7);
+
+insert into restaurante (estrelas, tipoculinaria, fk_pontodetransporte_idpontodepartida) values (3, 'Indonesia', 8);
+insert into restaurante (estrelas, tipoculinaria, fk_pontodetransporte_idpontodepartida) values (4, 'Tanzania', 9);
+insert into restaurante (estrelas, tipoculinaria, fk_pontodetransporte_idpontodepartida) values (5, 'Indonesia', 10);
+insert into restaurante (estrelas, tipoculinaria, fk_pontodetransporte_idpontodepartida) values (4, 'China', 11);
+insert into restaurante (estrelas, tipoculinaria, fk_pontodetransporte_idpontodepartida) values (5, 'Pakistan', 12);
+insert into restaurante (estrelas, tipoculinaria, fk_pontodetransporte_idpontodepartida) values (5, 'Brazil', 13);
+
+insert into hotel (estrelas, quartos, fk_pontodetransporte_idpontodepartida) values (5, 100, 14);
+insert into hotel (estrelas, quartos, fk_pontodetransporte_idpontodepartida) values (3, 44, 15);
+insert into hotel (estrelas, quartos, fk_pontodetransporte_idpontodepartida) values (4, 107, 16);
+insert into hotel (estrelas, quartos, fk_pontodetransporte_idpontodepartida) values (4, 118, 17);
+insert into hotel (estrelas, quartos, fk_pontodetransporte_idpontodepartida) values (4, 44, 18);
