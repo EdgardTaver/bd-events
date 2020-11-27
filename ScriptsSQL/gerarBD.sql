@@ -132,7 +132,6 @@ CREATE TABLE ContasAPagar (
 CREATE TABLE Papel (
     idPapel SERIAL PRIMARY KEY,
     Funcao VARCHAR,
-    Nome VARCHAR,
     Descricao VARCHAR,
     fk_Certificado_idCertificado SERIAL
 );
@@ -436,7 +435,7 @@ CREATE TABLE NotaFiscal (
     ChaveDeAcesso VARCHAR,
     fk_Transacao_idTransacao INTEGER,
     Itens VARCHAR,
-    Campo VARCHAR,
+    CFOP VARCHAR,
     Numero NUMERIC,
     ValorImposto NUMERIC,
     PRIMARY KEY (idNotaFiscal, fk_Transacao_idTransacao)
