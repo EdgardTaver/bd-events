@@ -32,7 +32,8 @@ CREATE TABLE Atividade (
     Nome VARCHAR,
     Descricao VARCHAR,
     Data DATE,
-    PublicoAlvo VARCHAR
+    PublicoAlvo VARCHAR,
+    fk_Evento_idEvento SERIAL
 );
 
 CREATE TABLE Entidade (
@@ -289,14 +290,9 @@ CREATE TABLE Transfer (
 
 CREATE TABLE Veiculo (
     idVeiculo SERIAL PRIMARY KEY,
-    Tipo VARCHAR,
-    Descricao VARCHAR,
+    Marca VARCHAR,
+    Modelo VARCHAR,
     Ano INTEGER
-);
-
-CREATE TABLE Possui (
-    fk_Atividade_idAtividade SERIAL,
-    fk_Evento_idEvento SERIAL
 );
 
 CREATE TABLE OcorreEm1 (
@@ -490,6 +486,10 @@ ALTER TABLE PortalVirtual ADD CONSTRAINT FK_PortalVirtual_2
     REFERENCES Plataforma (idPlataforma)
     ON DELETE CASCADE;
  
+ALTER TABLE Atividade ADD CONSTRAINT FK_Atividade_2
+    FOREIGN KEY (fk_Evento_idEvento)
+    REFERENCES Evento (idEvento);
+ 
 ALTER TABLE Universidade ADD CONSTRAINT FK_Universidade_2
     FOREIGN KEY (fk_Entidade_idEntidade)
     REFERENCES Entidade (idEntidade)
@@ -642,16 +642,6 @@ ALTER TABLE EstacaoMetro ADD CONSTRAINT FK_EstacaoMetro_2
 ALTER TABLE Transfer ADD CONSTRAINT FK_Transfer_2
     FOREIGN KEY (fk_Veiculo_idVeiculo)
     REFERENCES Veiculo (idVeiculo)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE Possui ADD CONSTRAINT FK_Possui_1
-    FOREIGN KEY (fk_Atividade_idAtividade)
-    REFERENCES Atividade (idAtividade)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE Possui ADD CONSTRAINT FK_Possui_2
-    FOREIGN KEY (fk_Evento_idEvento)
-    REFERENCES Evento (idEvento)
     ON DELETE RESTRICT;
  
 ALTER TABLE OcorreEm1 ADD CONSTRAINT FK_OcorreEm1_1
