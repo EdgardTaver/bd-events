@@ -435,22 +435,31 @@ CREATE TABLE NotaFiscal (
     Data DATE,
     ChaveDeAcesso VARCHAR,
     fk_Transacao_idTransacao INTEGER,
+    Itens VARCHAR,
+    Campo VARCHAR,
+    Numero NUMERIC,
+    ValorImposto NUMERIC,
     PRIMARY KEY (idNotaFiscal, fk_Transacao_idTransacao)
 );
 
-CREATE TABLE FormaDePagamento (
-    idFormaDePagamento INTEGER PRIMARY KEY,
+CREATE TABLE Pagamento (
+    idPagamento INTEGER PRIMARY KEY,
     Nome VARCHAR,
     Tipo VARCHAR,
     Valor NUMERIC,
-    fk_Transacao_idTransacao INTEGER
+    fk_Transacao_idTransacao INTEGER,
+    CodigoAdquirente VARCHAR,
+    Status VARCHAR
 );
 
 CREATE TABLE Recibo (
     idRecibo INTEGER PRIMARY KEY,
     Parcelas INTEGER,
     ValorParcela NUMERIC,
-    fk_FormaDePagamento_idFormaDePagamento INTEGER
+    fk_Pagamento_idPagamento INTEGER,
+    Adquirente VARCHAR,
+    CodigoAdquirente VARCHAR,
+    Descricao VARCHAR
 );
  
 ALTER TABLE Plataforma ADD CONSTRAINT FK_Plataforma_2
@@ -889,11 +898,11 @@ ALTER TABLE NotaFiscal ADD CONSTRAINT FK_NotaFiscal_2
     FOREIGN KEY (fk_Transacao_idTransacao)
     REFERENCES Transacao (idTransacao);
  
-ALTER TABLE FormaDePagamento ADD CONSTRAINT FK_FormaDePagamento_2
+ALTER TABLE Pagamento ADD CONSTRAINT FK_Pagamento_2
     FOREIGN KEY (fk_Transacao_idTransacao)
     REFERENCES Transacao (idTransacao);
  
 ALTER TABLE Recibo ADD CONSTRAINT FK_Recibo_2
-    FOREIGN KEY (fk_FormaDePagamento_idFormaDePagamento)
-    REFERENCES FormaDePagamento (idFormaDePagamento)
+    FOREIGN KEY (fk_Pagamento_idPagamento)
+    REFERENCES Pagamento (idPagamento)
     ON DELETE RESTRICT;
