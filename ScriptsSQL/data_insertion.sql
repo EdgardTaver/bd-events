@@ -108,7 +108,62 @@ insert into veiculo (idveiculo, marca, modelo, ano) values (10, 'Mercedes-Benz',
 insert into veiculo (idveiculo, marca, modelo, ano) values (11, 'Ford', 'Thunderbird', 1995);
 insert into veiculo (idveiculo, marca, modelo, ano) values (12, 'Nissan', 'Titan', 2007);
 
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (1, 'boleto', 'jcb', 582.56, 8.92);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (2, 'boleto', 'visa-electron', 695.73, 14.87);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (3, 'credit_card', 'jcb', 430.4, 8.83);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (4, 'pix', 'jcb', 352.48, 1.92);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (5, 'credit_card', 'china-unionpay', 688.01, 10.19);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (6, 'boleto', 'diners-club-enroute', 451.31, 1.62);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (7, 'boleto', 'jcb', 519.09, 7.97);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (8, 'boleto', 'mastercard', 716.55, 14.91);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (9, 'boleto', 'switch', 42.14, 12.36);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (10, 'credit_card', 'jcb', 652.29, 1.11);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (11, 'credit_card', 'visa-electron', 722.96, 10.99);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (12, 'pix', 'visa-electron', 502.37, 10.12);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (13, 'pix', 'jcb', 772.95, 12.28);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (14, 'credit_card', 'jcb', 241.68, 13.86);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (15, 'boleto', 'jcb', 748.32, 12.51);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (16, 'boleto', 'switch', 218.56, 7.13);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (17, 'pix', 'mastercard', 375.62, 12.63);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (18, 'credit_card', 'jcb', 418.04, 3.52);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (19, 'pix', 'laser', 75.98, 11.54);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (20, 'boleto', 'mastercard', 375.51, 7.88);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (21, 'credit_card', 'jcb', 176.43, 13.08);
+insert into formadepagamento (idformadepagamento, tipo, nome, valor, fk_transacao_idtransacao) values (22, 'boleto', 'diners-club-carte-blanche', 439.28, 10.71);
+
 -- inserts com fk
+
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (9, 4);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (10, 2);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (1, 4);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (1, 1);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (7, 5);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (2, 1);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (8, 1);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (5, 4);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (1, 1);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (1, 2);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (8, 2);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (6, 6);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (6, 5);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (9, 5);
+insert into toca (fk_localfisico_fk_plataforma_idplataforma, fk_playlist_idplaylist) values (6, 2);
+
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (1, 1338.9, 'aprovada', 13);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (2, 5649.47, 'aprovada', 30);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (3, 6863.72, 'aprovada', 25);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (4, 8564.09, 'aprovada', 22);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (5, 5166.38, 'aprovada', 2);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (6, 10298.58, 'aprovada', 17);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (7, 5815.74, 'aprovada', 30);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (8, 3322.23, 'aprovada', 23);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (9, 4105.57, 'aprovada', 11);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (10, 1502.35, 'aprovada', 13);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (11, 7531.96, 'aprovada', 9);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (12, 10576.38, 'aprovada', 21);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (13, 10315.59, 'aprovada', 25);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (14, 7879.72, 'aprovada', 20);
+insert into transacao (idtransacao, valortotal, statustransacao, fk_pessoa_idpessoa) values (15, 4687.69, 'aprovada', 2);
 
 insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (1, '08:00', '18:00', '82 min', 5);
 insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (2, '08:00', '18:00', '11 min', 10);
