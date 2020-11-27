@@ -45,7 +45,8 @@ CREATE TABLE Entidade (
 
 CREATE TABLE Universidade (
     MEC VARCHAR,
-    fk_Entidade_idEntidade SERIAL PRIMARY KEY
+    RazaoSocial VARCHAR
+    fk_Entidade_idEntidade SERIAL PRIMARY KEY,
 );
 
 CREATE TABLE Conselhos (
