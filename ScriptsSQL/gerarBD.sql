@@ -45,8 +45,8 @@ CREATE TABLE Entidade (
 
 CREATE TABLE Universidade (
     MEC VARCHAR,
-    RazaoSocial VARCHAR
     fk_Entidade_idEntidade SERIAL PRIMARY KEY,
+    RazaoSocial VARCHAR
 );
 
 CREATE TABLE Conselhos (
@@ -448,16 +448,12 @@ CREATE TABLE NotaFiscal (
     PRIMARY KEY (idNotaFiscal, fk_Transacao_idTransacao)
 );
 
-CREATE TABLE TransacaoPagoAtravesDeFormaPgmto (
-    fk_Transacao_idTransacao INTEGER,
-    fk_FormaDePagamento_idFormaDePagamento INTEGER
-);
-
 CREATE TABLE FormaDePagamento (
     idFormaDePagamento INTEGER PRIMARY KEY,
     Nome VARCHAR,
     Tipo VARCHAR,
-    Valor NUMERIC
+    Valor NUMERIC,
+    fk_Transacao_idTransacao INTEGER
 );
 
 CREATE TABLE Recibo (
@@ -914,15 +910,9 @@ ALTER TABLE NotaFiscal ADD CONSTRAINT FK_NotaFiscal_2
     FOREIGN KEY (fk_Transacao_idTransacao)
     REFERENCES Transacao (idTransacao);
  
-ALTER TABLE TransacaoPagoAtravesDeFormaPgmto ADD CONSTRAINT FK_TransacaoPagoAtravesDeFormaPgmto_1
+ALTER TABLE FormaDePagamento ADD CONSTRAINT FK_FormaDePagamento_2
     FOREIGN KEY (fk_Transacao_idTransacao)
-    REFERENCES Transacao (idTransacao)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE TransacaoPagoAtravesDeFormaPgmto ADD CONSTRAINT FK_TransacaoPagoAtravesDeFormaPgmto_2
-    FOREIGN KEY (fk_FormaDePagamento_idFormaDePagamento)
-    REFERENCES FormaDePagamento (idFormaDePagamento)
-    ON DELETE RESTRICT;
+    REFERENCES Transacao (idTransacao);
  
 ALTER TABLE Recibo ADD CONSTRAINT FK_Recibo_2
     FOREIGN KEY (fk_FormaDePagamento_idFormaDePagamento)
