@@ -1,0 +1,1 @@
+Para generalização/especialização, verificar IDs para garantir que seja respeitado o esquema de único/exclusivo
