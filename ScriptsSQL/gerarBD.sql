@@ -3,8 +3,7 @@ CREATE TABLE Evento (
     idEvento SERIAL PRIMARY KEY,
     Tema VARCHAR,
     Nome VARCHAR,
-    Edicao VARCHAR,
-    fk_PerfilRedeSocial_idPerfilRedeSocial SERIAL
+    Edicao VARCHAR
 );
 
 CREATE TABLE Plataforma (
@@ -233,7 +232,8 @@ CREATE TABLE PerfilRedeSocial (
     URL VARCHAR,
     idPerfilRedeSocial SERIAL PRIMARY KEY,
     Seguidores INTEGER,
-    fk_GrupoMusical_idGrupoMusical SERIAL
+    fk_GrupoMusical_idGrupoMusical SERIAL,
+    fk_Evento_idEvento SERIAL
 );
 
 CREATE TABLE RedeSocial (
@@ -474,11 +474,6 @@ CREATE TABLE TransacaoIncluiTaxa (
     fk_Transacao_idTransacao INTEGER
 );
 
-ALTER TABLE Evento ADD CONSTRAINT FK_Evento_2
-    FOREIGN KEY (fk_PerfilRedeSocial_idPerfilRedeSocial)
-    REFERENCES PerfilRedeSocial (idPerfilRedeSocial)
-    ON DELETE CASCADE;
-
 ALTER TABLE Plataforma ADD CONSTRAINT FK_Plataforma_2
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
@@ -608,6 +603,10 @@ ALTER TABLE PerfilRedeSocial ADD CONSTRAINT FK_PerfilRedeSocial_2
     FOREIGN KEY (fk_GrupoMusical_idGrupoMusical)
     REFERENCES GrupoMusical (idGrupoMusical)
     ON DELETE CASCADE;
+
+ALTER TABLE PerfilRedeSocial ADD CONSTRAINT FK_PerfilRedeSocial_3
+    FOREIGN KEY (fk_Evento_idEvento)
+    REFERENCES Evento (idEvento);
 
 ALTER TABLE Avaliacao ADD CONSTRAINT FK_Avaliacao_2
     FOREIGN KEY (fk_Atividade_idAtividade)
