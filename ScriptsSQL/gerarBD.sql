@@ -1,3 +1,4 @@
+/* LogicoGeradorSQL: */
 
 CREATE TABLE Evento (
     idEvento SERIAL PRIMARY KEY,
@@ -105,7 +106,7 @@ CREATE TABLE Beneficio (
 
 CREATE TABLE Pessoa (
     idPessoa SERIAL PRIMARY KEY,
-    CPF VARCHAR UNIQUE NOT NULL,
+    CPF VARCHAR,
     Nome VARCHAR,
     Telefone VARCHAR,
     Email VARCHAR
@@ -293,143 +294,143 @@ CREATE TABLE Veiculo (
     Ano INTEGER
 );
 
-CREATE TABLE EventoPossuiAtividade (
+CREATE TABLE Possui (
     fk_Atividade_idAtividade SERIAL,
     fk_Evento_idEvento SERIAL
 );
 
-CREATE TABLE AtividadeOcorreEmInstalacao (
+CREATE TABLE OcorreEm1 (
     fk_Instalacao_idInstalacao SERIAL,
     fk_Atividade_idAtividade SERIAL,
     HorarioInicio TIME,
     HorarioFim TIME
 );
 
-CREATE TABLE EntidadeContribuiEvento (
+CREATE TABLE Contribui (
     fk_Entidade_idEntidade SERIAL,
     fk_Evento_idEvento SERIAL,
     Tipo VARCHAR
 );
 
-CREATE TABLE AtividadeOcorreEmStreaming (
+CREATE TABLE OcorreEm2 (
     fk_CanalStreaming_idStreaming SERIAL,
     fk_Atividade_idAtividade SERIAL,
     HorarioInicio TIME,
     HorarioFim TIME
 );
 
-CREATE TABLE PacoteCompostoPorBeneficio (
+CREATE TABLE CompostoPor (
     fk_Pacote_idPacote SERIAL,
     fk_Beneficio_idBeneficio SERIAL
 );
 
-CREATE TABLE EntidadeCompostaPorPessoa (
+CREATE TABLE CompostaPor1 (
     fk_Pessoa_idPessoa SERIAL,
     fk_Entidade_idEntidade SERIAL
 );
 
-CREATE TABLE DescontoDescontaTaxa (
+CREATE TABLE Desconta (
     fk_Taxa_idTaxa SERIAL,
     fk_Desconto_idDesconto SERIAL
 );
 
-CREATE TABLE PessoaExercePapel (
+CREATE TABLE Exerce (
     fk_Papel_idPapel SERIAL,
     fk_Pessoa_idPessoa SERIAL
 );
 
-CREATE TABLE EntidadePromoveAtividade (
+CREATE TABLE Promove (
     fk_Entidade_idEntidade SERIAL,
     fk_Atividade_idAtividade SERIAL
 );
 
-CREATE TABLE AtividadeFinanciadaPorTaxa (
+CREATE TABLE FinanciadoPor1 (
     fk_Atividade_idAtividade SERIAL,
     fk_Taxa_idTaxa SERIAL
 );
 
-CREATE TABLE TutorialMinistradoPor (
+CREATE TABLE MinistradoPor2 (
     fk_Tutorial_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE WorkshopMinistradoPor (
+CREATE TABLE MinistradoPor1 (
     fk_Workshops_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE PalestraPalestradaPor (
+CREATE TABLE PalestradaPor1 (
     fk_Palestra_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE AtividadeSocialParticipadaPor (
+CREATE TABLE ParticipadaPor2 (
     fk_AtividadeSocial_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE ConcursoConcorridoPor (
+CREATE TABLE ConcorridoPor (
     fk_Concurso_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE ConcursoJuizadoPor (
+CREATE TABLE JuizadoPor (
     fk_Concurso_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE ReuniaoMinistradaPor (
+CREATE TABLE MinistradaPor (
     fk_Reuniao_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE PapelParticipaDeReuniao (
+CREATE TABLE ParticipaDe (
     fk_Reuniao_fk_Atividade_idAtividade SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE ArtigoEscritoPor (
+CREATE TABLE EscritoPor (
     fk_Papel_idPapel SERIAL,
     fk_Artigo_idArtigo SERIAL
 );
 
-CREATE TABLE ApresentacaoArtigoCompostoPor (
+CREATE TABLE CompostoPor2 (
     fk_Sessao_idSessao SERIAL,
     fk_ApresentacaoDeArtigo_fk_Atividade_idAtividade SERIAL
 );
 
-CREATE TABLE SessaoDirigidaPor (
+CREATE TABLE DirigidoPor (
     fk_Sessao_idSessao SERIAL,
     fk_Papel_idPapel SERIAL
 );
 
-CREATE TABLE PlaylistCompostaPorMusica (
+CREATE TABLE CompostaPor2 (
     fk_Playlist_idPlaylist SERIAL,
     fk_Musica_idMusica SERIAL
 );
 
-CREATE TABLE PlaylistTocaEmLocalFisico (
+CREATE TABLE Toca (
     fk_LocalFisico_fk_Plataforma_idPlataforma SERIAL,
     fk_Playlist_idPlaylist SERIAL
 );
 
-CREATE TABLE AnuncioPublicadoEmRedeSocial (
+CREATE TABLE PublicadoEm (
     fk_RedeSocial_idRedeSocial SERIAL,
     fk_AnuncioOnline_idAnuncioOnline SERIAL,
     Data TIMESTAMP
 );
 
-CREATE TABLE PerfilRegistradoEmRedeSocial (
+CREATE TABLE RegistradoEm1 (
     fk_RedeSocial_idRedeSocial SERIAL,
     fk_PerfilRedeSocial_idPerfilRedeSocial SERIAL
 );
 
-CREATE TABLE TransferLevaAtePontoDeTransporte (
+CREATE TABLE LevaAte1 (
     fk_PontoDeTransporte_idPontoDePartida SERIAL,
     fk_Transfer_idTransfer SERIAL
 );
 
-CREATE TABLE TransferLevaAteLocalFisico (
+CREATE TABLE LevaAte2 (
     fk_Transfer_idTransfer SERIAL,
     fk_LocalFisico_fk_Plataforma_idPlataforma SERIAL
 );
@@ -473,475 +474,475 @@ CREATE TABLE TransacaoIncluiTaxa (
     fk_Taxa_idTaxa SERIAL,
     fk_Transacao_idTransacao INTEGER
 );
-
+ 
 ALTER TABLE Plataforma ADD CONSTRAINT FK_Plataforma_2
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE LocalFisico ADD CONSTRAINT FK_LocalFisico_2
     FOREIGN KEY (fk_Plataforma_idPlataforma)
     REFERENCES Plataforma (idPlataforma)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE PortalVirtual ADD CONSTRAINT FK_PortalVirtual_2
     FOREIGN KEY (fk_Plataforma_idPlataforma)
     REFERENCES Plataforma (idPlataforma)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Universidade ADD CONSTRAINT FK_Universidade_2
     FOREIGN KEY (fk_Entidade_idEntidade)
     REFERENCES Entidade (idEntidade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Conselhos ADD CONSTRAINT FK_Conselhos_2
     FOREIGN KEY (fk_Entidade_idEntidade)
     REFERENCES Entidade (idEntidade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Empresa ADD CONSTRAINT FK_Empresa_2
     FOREIGN KEY (fk_Entidade_idEntidade)
     REFERENCES Entidade (idEntidade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Taxa ADD CONSTRAINT FK_Taxa_2
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Instalacao ADD CONSTRAINT FK_Instalacao_2
     FOREIGN KEY (fk_LocalFisico_fk_Plataforma_idPlataforma)
     REFERENCES LocalFisico (fk_Plataforma_idPlataforma)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE CanalStreaming ADD CONSTRAINT FK_CanalStreaming_2
     FOREIGN KEY (fk_PortalVirtual_fk_Plataforma_idPlataforma)
     REFERENCES PortalVirtual (fk_Plataforma_idPlataforma)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Ingresso ADD CONSTRAINT FK_Ingresso_2
     FOREIGN KEY (fk_Taxa_idTaxa)
     REFERENCES Taxa (idTaxa)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE TaxaEmpresa ADD CONSTRAINT FK_TaxaEmpresa_2
     FOREIGN KEY (fk_Taxa_idTaxa)
     REFERENCES Taxa (idTaxa)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE TaxaEmpresa ADD CONSTRAINT FK_TaxaEmpresa_3
     FOREIGN KEY (fk_Pacote_idPacote)
     REFERENCES Pacote (idPacote)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE ContasAPagar ADD CONSTRAINT FK_ContasAPagar_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE ContasAPagar ADD CONSTRAINT FK_ContasAPagar_3
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Papel ADD CONSTRAINT FK_Papel_2
     FOREIGN KEY (fk_Certificado_idCertificado)
     REFERENCES Certificado (idCertificado)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Tutorial ADD CONSTRAINT FK_Tutorial_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Workshops ADD CONSTRAINT FK_Workshops_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Palestra ADD CONSTRAINT FK_Palestra_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE AtividadeSocial ADD CONSTRAINT FK_AtividadeSocial_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Concurso ADD CONSTRAINT FK_Concurso_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Reuniao ADD CONSTRAINT FK_Reuniao_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE ApresentacaoDeArtigo ADD CONSTRAINT FK_ApresentacaoDeArtigo_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE ApresentacaoDeArtigo ADD CONSTRAINT FK_ApresentacaoDeArtigo_3
     FOREIGN KEY (fk_Artigo_idArtigo)
     REFERENCES Artigo (idArtigo)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE Musica ADD CONSTRAINT FK_Musica_2
     FOREIGN KEY (fk_GrupoMusical_idGrupoMusical)
     REFERENCES GrupoMusical (idGrupoMusical)
-    ON DELETE CASCADE;
-
+    ON DELETE RESTRICT;
+ 
 ALTER TABLE AnuncioOnline ADD CONSTRAINT FK_AnuncioOnline_2
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE PerfilRedeSocial ADD CONSTRAINT FK_PerfilRedeSocial_2
     FOREIGN KEY (fk_GrupoMusical_idGrupoMusical)
     REFERENCES GrupoMusical (idGrupoMusical)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE PerfilRedeSocial ADD CONSTRAINT FK_PerfilRedeSocial_3
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento);
-
+ 
 ALTER TABLE Avaliacao ADD CONSTRAINT FK_Avaliacao_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE SET NULL;
-
+ 
 ALTER TABLE Avaliacao ADD CONSTRAINT FK_Avaliacao_3
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE SET NULL;
-
+ 
 ALTER TABLE Avaliacao ADD CONSTRAINT FK_Avaliacao_4
     FOREIGN KEY (fk_Pessoa_idPessoa)
     REFERENCES Pessoa (idPessoa)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Hotel ADD CONSTRAINT FK_Hotel_2
     FOREIGN KEY (fk_PontoDeTransporte_idPontoDePartida)
     REFERENCES PontoDeTransporte (idPontoDePartida)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Restaurante ADD CONSTRAINT FK_Restaurante_2
     FOREIGN KEY (fk_PontoDeTransporte_idPontoDePartida)
     REFERENCES PontoDeTransporte (idPontoDePartida)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE EstacaoMetro ADD CONSTRAINT FK_EstacaoMetro_2
     FOREIGN KEY (fk_PontoDeTransporte_idPontoDePartida)
     REFERENCES PontoDeTransporte (idPontoDePartida)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE Transfer ADD CONSTRAINT FK_Transfer_2
     FOREIGN KEY (fk_Veiculo_idVeiculo)
     REFERENCES Veiculo (idVeiculo)
     ON DELETE RESTRICT;
-
-ALTER TABLE EventoPossuiAtividade ADD CONSTRAINT FK_Possui_1
+ 
+ALTER TABLE Possui ADD CONSTRAINT FK_Possui_1
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE EventoPossuiAtividade ADD CONSTRAINT FK_Possui_2
+ 
+ALTER TABLE Possui ADD CONSTRAINT FK_Possui_2
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE RESTRICT;
-
-ALTER TABLE AtividadeOcorreEmInstalacao ADD CONSTRAINT FK_OcorreEm1_1
+ 
+ALTER TABLE OcorreEm1 ADD CONSTRAINT FK_OcorreEm1_1
     FOREIGN KEY (fk_Instalacao_idInstalacao)
     REFERENCES Instalacao (idInstalacao)
     ON DELETE RESTRICT;
-
-ALTER TABLE AtividadeOcorreEmInstalacao ADD CONSTRAINT FK_OcorreEm1_2
+ 
+ALTER TABLE OcorreEm1 ADD CONSTRAINT FK_OcorreEm1_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE SET NULL;
-
-ALTER TABLE EntidadeContribuiEvento ADD CONSTRAINT FK_Contribui_1
+ 
+ALTER TABLE Contribui ADD CONSTRAINT FK_Contribui_1
     FOREIGN KEY (fk_Entidade_idEntidade)
     REFERENCES Entidade (idEntidade)
     ON DELETE RESTRICT;
-
-ALTER TABLE EntidadeContribuiEvento ADD CONSTRAINT FK_Contribui_2
+ 
+ALTER TABLE Contribui ADD CONSTRAINT FK_Contribui_2
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE RESTRICT;
-
-ALTER TABLE AtividadeOcorreEmStreaming ADD CONSTRAINT FK_OcorreEm2_1
+ 
+ALTER TABLE OcorreEm2 ADD CONSTRAINT FK_OcorreEm2_1
     FOREIGN KEY (fk_CanalStreaming_idStreaming)
     REFERENCES CanalStreaming (idStreaming)
     ON DELETE SET NULL;
-
-ALTER TABLE AtividadeOcorreEmStreaming ADD CONSTRAINT FK_OcorreEm2_2
+ 
+ALTER TABLE OcorreEm2 ADD CONSTRAINT FK_OcorreEm2_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE SET NULL;
-
-ALTER TABLE PacoteCompostoPorBeneficio ADD CONSTRAINT FK_CompostoPor_1
+ 
+ALTER TABLE CompostoPor ADD CONSTRAINT FK_CompostoPor_1
     FOREIGN KEY (fk_Pacote_idPacote)
     REFERENCES Pacote (idPacote)
     ON DELETE RESTRICT;
-
-ALTER TABLE PacoteCompostoPorBeneficio ADD CONSTRAINT FK_CompostoPor_2
+ 
+ALTER TABLE CompostoPor ADD CONSTRAINT FK_CompostoPor_2
     FOREIGN KEY (fk_Beneficio_idBeneficio)
     REFERENCES Beneficio (idBeneficio)
     ON DELETE RESTRICT;
-
-ALTER TABLE EntidadeCompostaPorPessoa ADD CONSTRAINT FK_CompostaPor1_1
+ 
+ALTER TABLE CompostaPor1 ADD CONSTRAINT FK_CompostaPor1_1
     FOREIGN KEY (fk_Pessoa_idPessoa)
     REFERENCES Pessoa (idPessoa)
     ON DELETE RESTRICT;
-
-ALTER TABLE EntidadeCompostaPorPessoa ADD CONSTRAINT FK_CompostaPor1_2
+ 
+ALTER TABLE CompostaPor1 ADD CONSTRAINT FK_CompostaPor1_2
     FOREIGN KEY (fk_Entidade_idEntidade)
     REFERENCES Entidade (idEntidade)
     ON DELETE SET NULL;
-
-ALTER TABLE DescontoDescontaTaxa ADD CONSTRAINT FK_Desconta_1
+ 
+ALTER TABLE Desconta ADD CONSTRAINT FK_Desconta_1
     FOREIGN KEY (fk_Taxa_idTaxa)
     REFERENCES Taxa (idTaxa)
     ON DELETE RESTRICT;
-
-ALTER TABLE DescontoDescontaTaxa ADD CONSTRAINT FK_Desconta_2
+ 
+ALTER TABLE Desconta ADD CONSTRAINT FK_Desconta_2
     FOREIGN KEY (fk_Desconto_idDesconto)
     REFERENCES Desconto (idDesconto)
     ON DELETE SET NULL;
-
-ALTER TABLE PessoaExercePapel ADD CONSTRAINT FK_Exerce_1
+ 
+ALTER TABLE Exerce ADD CONSTRAINT FK_Exerce_1
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE PessoaExercePapel ADD CONSTRAINT FK_Exerce_2
+ 
+ALTER TABLE Exerce ADD CONSTRAINT FK_Exerce_2
     FOREIGN KEY (fk_Pessoa_idPessoa)
     REFERENCES Pessoa (idPessoa)
     ON DELETE SET NULL;
-
-ALTER TABLE EntidadePromoveAtividade ADD CONSTRAINT FK_Promove_1
+ 
+ALTER TABLE Promove ADD CONSTRAINT FK_Promove_1
     FOREIGN KEY (fk_Entidade_idEntidade)
     REFERENCES Entidade (idEntidade)
     ON DELETE RESTRICT;
-
-ALTER TABLE EntidadePromoveAtividade ADD CONSTRAINT FK_Promove_2
+ 
+ALTER TABLE Promove ADD CONSTRAINT FK_Promove_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE SET NULL;
-
-ALTER TABLE AtividadeFinanciadaPorTaxa ADD CONSTRAINT FK_FinanciadoPor1_1
+ 
+ALTER TABLE FinanciadoPor1 ADD CONSTRAINT FK_FinanciadoPor1_1
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
     ON DELETE SET NULL;
-
-ALTER TABLE AtividadeFinanciadaPorTaxa ADD CONSTRAINT FK_FinanciadoPor1_2
+ 
+ALTER TABLE FinanciadoPor1 ADD CONSTRAINT FK_FinanciadoPor1_2
     FOREIGN KEY (fk_Taxa_idTaxa)
     REFERENCES Taxa (idTaxa)
     ON DELETE SET NULL;
-
-ALTER TABLE TutorialMinistradoPor ADD CONSTRAINT FK_MinistradoPor2_1
+ 
+ALTER TABLE MinistradoPor2 ADD CONSTRAINT FK_MinistradoPor2_1
     FOREIGN KEY (fk_Tutorial_fk_Atividade_idAtividade)
     REFERENCES Tutorial (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE TutorialMinistradoPor ADD CONSTRAINT FK_MinistradoPor2_2
+ 
+ALTER TABLE MinistradoPor2 ADD CONSTRAINT FK_MinistradoPor2_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE WorkshopMinistradoPor ADD CONSTRAINT FK_MinistradoPor1_1
+ 
+ALTER TABLE MinistradoPor1 ADD CONSTRAINT FK_MinistradoPor1_1
     FOREIGN KEY (fk_Workshops_fk_Atividade_idAtividade)
     REFERENCES Workshops (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE WorkshopMinistradoPor ADD CONSTRAINT FK_MinistradoPor1_2
+ 
+ALTER TABLE MinistradoPor1 ADD CONSTRAINT FK_MinistradoPor1_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE PalestraPalestradaPor ADD CONSTRAINT FK_PalestradaPor1_1
+ 
+ALTER TABLE PalestradaPor1 ADD CONSTRAINT FK_PalestradaPor1_1
     FOREIGN KEY (fk_Palestra_fk_Atividade_idAtividade)
     REFERENCES Palestra (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE PalestraPalestradaPor ADD CONSTRAINT FK_PalestradaPor1_2
+ 
+ALTER TABLE PalestradaPor1 ADD CONSTRAINT FK_PalestradaPor1_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE AtividadeSocialParticipadaPor ADD CONSTRAINT FK_ParticipadaPor2_1
+ 
+ALTER TABLE ParticipadaPor2 ADD CONSTRAINT FK_ParticipadaPor2_1
     FOREIGN KEY (fk_AtividadeSocial_fk_Atividade_idAtividade)
     REFERENCES AtividadeSocial (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE AtividadeSocialParticipadaPor ADD CONSTRAINT FK_ParticipadaPor2_2
+ 
+ALTER TABLE ParticipadaPor2 ADD CONSTRAINT FK_ParticipadaPor2_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE ConcursoConcorridoPor ADD CONSTRAINT FK_ConcorridoPor_1
+ 
+ALTER TABLE ConcorridoPor ADD CONSTRAINT FK_ConcorridoPor_1
     FOREIGN KEY (fk_Concurso_fk_Atividade_idAtividade)
     REFERENCES Concurso (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE ConcursoConcorridoPor ADD CONSTRAINT FK_ConcorridoPor_2
+ 
+ALTER TABLE ConcorridoPor ADD CONSTRAINT FK_ConcorridoPor_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE ConcursoJuizadoPor ADD CONSTRAINT FK_JuizadoPor_1
+ 
+ALTER TABLE JuizadoPor ADD CONSTRAINT FK_JuizadoPor_1
     FOREIGN KEY (fk_Concurso_fk_Atividade_idAtividade)
     REFERENCES Concurso (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE ConcursoJuizadoPor ADD CONSTRAINT FK_JuizadoPor_2
+ 
+ALTER TABLE JuizadoPor ADD CONSTRAINT FK_JuizadoPor_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE ReuniaoMinistradaPor ADD CONSTRAINT FK_MinistradaPor_1
+ 
+ALTER TABLE MinistradaPor ADD CONSTRAINT FK_MinistradaPor_1
     FOREIGN KEY (fk_Reuniao_fk_Atividade_idAtividade)
     REFERENCES Reuniao (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE ReuniaoMinistradaPor ADD CONSTRAINT FK_MinistradaPor_2
+ 
+ALTER TABLE MinistradaPor ADD CONSTRAINT FK_MinistradaPor_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE PapelParticipaDeReuniao ADD CONSTRAINT FK_ParticipaDe_1
+ 
+ALTER TABLE ParticipaDe ADD CONSTRAINT FK_ParticipaDe_1
     FOREIGN KEY (fk_Reuniao_fk_Atividade_idAtividade)
     REFERENCES Reuniao (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE PapelParticipaDeReuniao ADD CONSTRAINT FK_ParticipaDe_2
+ 
+ALTER TABLE ParticipaDe ADD CONSTRAINT FK_ParticipaDe_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE ArtigoEscritoPor ADD CONSTRAINT FK_EscritoPor_1
+ 
+ALTER TABLE EscritoPor ADD CONSTRAINT FK_EscritoPor_1
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE ArtigoEscritoPor ADD CONSTRAINT FK_EscritoPor_2
+ 
+ALTER TABLE EscritoPor ADD CONSTRAINT FK_EscritoPor_2
     FOREIGN KEY (fk_Artigo_idArtigo)
     REFERENCES Artigo (idArtigo)
     ON DELETE RESTRICT;
-
-ALTER TABLE ApresentacaoArtigoCompostoPor ADD CONSTRAINT FK_CompostoPor2_1
+ 
+ALTER TABLE CompostoPor2 ADD CONSTRAINT FK_CompostoPor2_1
     FOREIGN KEY (fk_Sessao_idSessao)
     REFERENCES Sessao (idSessao)
     ON DELETE RESTRICT;
-
-ALTER TABLE ApresentacaoArtigoCompostoPor ADD CONSTRAINT FK_CompostoPor2_2
+ 
+ALTER TABLE CompostoPor2 ADD CONSTRAINT FK_CompostoPor2_2
     FOREIGN KEY (fk_ApresentacaoDeArtigo_fk_Atividade_idAtividade)
     REFERENCES ApresentacaoDeArtigo (fk_Atividade_idAtividade)
     ON DELETE RESTRICT;
-
-ALTER TABLE SessaoDirigidaPor ADD CONSTRAINT FK_DirigidoPor_1
+ 
+ALTER TABLE DirigidoPor ADD CONSTRAINT FK_DirigidoPor_1
     FOREIGN KEY (fk_Sessao_idSessao)
     REFERENCES Sessao (idSessao)
     ON DELETE RESTRICT;
-
-ALTER TABLE SessaoDirigidaPor ADD CONSTRAINT FK_DirigidoPor_2
+ 
+ALTER TABLE DirigidoPor ADD CONSTRAINT FK_DirigidoPor_2
     FOREIGN KEY (fk_Papel_idPapel)
     REFERENCES Papel (idPapel)
     ON DELETE RESTRICT;
-
-ALTER TABLE PlaylistCompostaPorMusica ADD CONSTRAINT FK_CompostaPor2_1
+ 
+ALTER TABLE CompostaPor2 ADD CONSTRAINT FK_CompostaPor2_1
     FOREIGN KEY (fk_Playlist_idPlaylist)
     REFERENCES Playlist (idPlaylist)
-    ON DELETE CASCADE;
-
-ALTER TABLE PlaylistCompostaPorMusica ADD CONSTRAINT FK_CompostaPor2_2
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE CompostaPor2 ADD CONSTRAINT FK_CompostaPor2_2
     FOREIGN KEY (fk_Musica_idMusica)
     REFERENCES Musica (idMusica)
-    ON DELETE CASCADE;
-
-ALTER TABLE PlaylistTocaEmLocalFisico ADD CONSTRAINT FK_Toca_1
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Toca ADD CONSTRAINT FK_Toca_1
     FOREIGN KEY (fk_LocalFisico_fk_Plataforma_idPlataforma)
     REFERENCES LocalFisico (fk_Plataforma_idPlataforma)
     ON DELETE RESTRICT;
-
-ALTER TABLE PlaylistTocaEmLocalFisico ADD CONSTRAINT FK_Toca_2
+ 
+ALTER TABLE Toca ADD CONSTRAINT FK_Toca_2
     FOREIGN KEY (fk_Playlist_idPlaylist)
     REFERENCES Playlist (idPlaylist)
     ON DELETE RESTRICT;
-
-ALTER TABLE AnuncioPublicadoEmRedeSocial ADD CONSTRAINT FK_PublicadoEm_1
+ 
+ALTER TABLE PublicadoEm ADD CONSTRAINT FK_PublicadoEm_1
     FOREIGN KEY (fk_RedeSocial_idRedeSocial)
     REFERENCES RedeSocial (idRedeSocial)
     ON DELETE RESTRICT;
-
-ALTER TABLE AnuncioPublicadoEmRedeSocial ADD CONSTRAINT FK_PublicadoEm_2
+ 
+ALTER TABLE PublicadoEm ADD CONSTRAINT FK_PublicadoEm_2
     FOREIGN KEY (fk_AnuncioOnline_idAnuncioOnline)
     REFERENCES AnuncioOnline (idAnuncioOnline)
     ON DELETE SET NULL;
-
-ALTER TABLE PerfilRegistradoEmRedeSocial ADD CONSTRAINT FK_RegistradoEm1_1
+ 
+ALTER TABLE RegistradoEm1 ADD CONSTRAINT FK_RegistradoEm1_1
     FOREIGN KEY (fk_RedeSocial_idRedeSocial)
     REFERENCES RedeSocial (idRedeSocial)
     ON DELETE RESTRICT;
-
-ALTER TABLE PerfilRegistradoEmRedeSocial ADD CONSTRAINT FK_RegistradoEm1_2
+ 
+ALTER TABLE RegistradoEm1 ADD CONSTRAINT FK_RegistradoEm1_2
     FOREIGN KEY (fk_PerfilRedeSocial_idPerfilRedeSocial)
     REFERENCES PerfilRedeSocial (idPerfilRedeSocial)
     ON DELETE SET NULL;
-
-ALTER TABLE TransferLevaAtePontoDeTransporte ADD CONSTRAINT FK_LevaAte1_1
+ 
+ALTER TABLE LevaAte1 ADD CONSTRAINT FK_LevaAte1_1
     FOREIGN KEY (fk_PontoDeTransporte_idPontoDePartida)
     REFERENCES PontoDeTransporte (idPontoDePartida)
     ON DELETE RESTRICT;
-
-ALTER TABLE TransferLevaAtePontoDeTransporte ADD CONSTRAINT FK_LevaAte1_2
+ 
+ALTER TABLE LevaAte1 ADD CONSTRAINT FK_LevaAte1_2
     FOREIGN KEY (fk_Transfer_idTransfer)
     REFERENCES Transfer (idTransfer)
     ON DELETE RESTRICT;
-
-ALTER TABLE TransferLevaAteLocalFisico ADD CONSTRAINT FK_LevaAte2_1
+ 
+ALTER TABLE LevaAte2 ADD CONSTRAINT FK_LevaAte2_1
     FOREIGN KEY (fk_Transfer_idTransfer)
     REFERENCES Transfer (idTransfer)
     ON DELETE RESTRICT;
-
-ALTER TABLE TransferLevaAteLocalFisico ADD CONSTRAINT FK_LevaAte2_2
+ 
+ALTER TABLE LevaAte2 ADD CONSTRAINT FK_LevaAte2_2
     FOREIGN KEY (fk_LocalFisico_fk_Plataforma_idPlataforma)
     REFERENCES LocalFisico (fk_Plataforma_idPlataforma)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE Transacao ADD CONSTRAINT FK_Transacao_2
     FOREIGN KEY (fk_Pessoa_idPessoa)
     REFERENCES Pessoa (idPessoa)
     ON DELETE CASCADE;
-
+ 
 ALTER TABLE NotaFiscal ADD CONSTRAINT FK_NotaFiscal_2
     FOREIGN KEY (fk_Transacao_idTransacao)
     REFERENCES Transacao (idTransacao);
-
+ 
 ALTER TABLE TransacaoPagoAtravesDeFormaPgmto ADD CONSTRAINT FK_TransacaoPagoAtravesDeFormaPgmto_1
     FOREIGN KEY (fk_Transacao_idTransacao)
     REFERENCES Transacao (idTransacao)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE TransacaoPagoAtravesDeFormaPgmto ADD CONSTRAINT FK_TransacaoPagoAtravesDeFormaPgmto_2
     FOREIGN KEY (fk_FormaDePagamento_idFormaDePagamento)
     REFERENCES FormaDePagamento (idFormaDePagamento)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE Recibo ADD CONSTRAINT FK_Recibo_2
     FOREIGN KEY (fk_FormaDePagamento_idFormaDePagamento)
     REFERENCES FormaDePagamento (idFormaDePagamento)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE TransacaoIncluiTaxa ADD CONSTRAINT FK_TransacaoIncluiTaxa_1
     FOREIGN KEY (fk_Taxa_idTaxa)
     REFERENCES Taxa (idTaxa)
     ON DELETE RESTRICT;
-
+ 
 ALTER TABLE TransacaoIncluiTaxa ADD CONSTRAINT FK_TransacaoIncluiTaxa_2
     FOREIGN KEY (fk_Transacao_idTransacao)
     REFERENCES Transacao (idTransacao);
