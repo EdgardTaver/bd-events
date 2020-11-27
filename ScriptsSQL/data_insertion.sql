@@ -606,36 +606,3 @@ insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values (
 insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 5 lilas', 3);
 insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 7 rubi', 4);
 insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 9 esmeralda', 2);
-
-INSERT INTO public.anuncioonline (titulo,descricao,url,acessos,custoporclique) VALUES
-	 ('facilitate intuitive schemas','Compatible empowering knowledge user','http://photobucket.com/ut/erat/curabitur.js',2975,7.12),
-	 ('benchmark virtual synergies','Grass-roots zero defect toolset','http://hubpages.com/adipiscing/elit/proin/risus/praesent/lectus/vestibulum.aspx',3314,0.93),
-	 ('whiteboard mission-critical schemas','Optimized uniform analyzer','http://webnode.com/ipsum/primis/in/faucibus.jsp',2097,6.52),
-	 ('e-enable vertical bandwidth','Secured intermediate throughput','https://nih.gov/nec/dui/luctus/rutrum/nulla/tellus.aspx',4650,0.73),
-	 ('exploit innovative interfaces','Cross-platform bifurcated pricing structure','https://g.co/morbi.js',4471,2.23),
-	 ('integrate best-of-breed communities','Business-focused executive open system','http://domainmarket.com/lobortis/sapien/sapien/non.png',5068,0.58);
-
-INSERT INTO public.entidade (nome,telefone,email) VALUES
-	 ('Trilith','(70)96312-0454','kpearcy0@google.com.hk'),
-	 ('Kaymbo','(35)95564-8065','lluckett1@buzzfeed.com'),
-	 ('Blogpad','(71)90530-5215','mschinetti2@rediff.com'),
-	 ('Innotype','(51)97650-3018','rhawthorne3@friendfeed.com'),
-	 ('Tagchat','(06)92231-9612','lhawarden4@dagondesign.com'),
-	 ('Vipe','(49)95066-0338','ccovert5@google.com.hk'),
-	 ('Snaptags','(53)93511-2292','bhearne7@ehow.com');
-
-INSERT INTO public.evento (tema,nome,edicao) VALUES
-	 ('Public Utilities','Grass-roots radical approach','DB2020'),
-	 ('Capital Goods','Robust methodical adapter','VRTV2020'),
-	 ('Public Utilities','User-centric multi-state encoding','TRCO2020'),
-	 ('Technology','Multi-tiered 5th generation system engine','RPM2019'),
-	 ('Health Care','Future-proofed dedicated architecture','TCRD2019'),
-	 ('Finance','Front-line optimizing matrices','AAME2019'),
-	 ('Basic Industries','Re-engineered systemic internet solution','ZBIO2020');
-
-INSERT INTO public.universidade (mec) VALUES
-	 ('EAFIT'),
-	 ('BSTU'),
-	 ('WMS'),
-	 ('TDIV'),
-	 ('FSCE');
