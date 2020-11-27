@@ -77,6 +77,13 @@ insert into entidade (identidade, nome, telefone, email) values (18, 'Subin', '+
 insert into entidade (identidade, nome, telefone, email) values (19, 'Zathin', '+55(03)97384-9475', 'aboudi@lulu.com');
 insert into entidade (identidade, nome, telefone, email) values (20, 'Rank', '+55(94)96368-1771', 'bpaffittj@latimes.com');
 
+insert into universidade (mec, razaosocial, fk_entidade_identidade) values ('CVBF', 'Seikei University', 15);
+insert into universidade (mec, razaosocial, fk_entidade_identidade) values ('ECR', 'Universidad Nacional de Entre Ríos', 16);
+insert into universidade (mec, razaosocial, fk_entidade_identidade) values ('SR', 'California University of Pennsylvania', 17);
+insert into universidade (mec, razaosocial, fk_entidade_identidade) values ('BIO.B', 'Ohio University - Zanesville', 18);
+insert into universidade (mec, razaosocial, fk_entidade_identidade) values ('IBOC', 'Matn University', 19);
+insert into universidade (mec, razaosocial, fk_entidade_identidade) values ('CHRW', 'Arab American University - Jenin', 20);
+
 insert into evento (idevento, tema, nome, edicao) values (1, 'Finance', 'Open-source holistic installation', 2020);
 insert into evento (idevento, tema, nome, edicao) values (2, 'Consumer Services', 'Front-line zero tolerance archive', 2019);
 insert into evento (idevento, tema, nome, edicao) values (3, 'Health Care', 'Cloned attitude-oriented encoding', 2019);
@@ -88,7 +95,82 @@ insert into evento (idevento, tema, nome, edicao) values (8, 'Consumer Non-Durab
 insert into evento (idevento, tema, nome, edicao) values (9, 'Finance', 'Automated full-range protocol', 2019);
 insert into evento (idevento, tema, nome, edicao) values (10, 'Public Utilities', 'Vision-oriented bandwidth-monitored capacity', 2020);
 
+insert into veiculo (idveiculo, marca, modelo, ano) values (1, 'Subaru', 'Impreza', 2001);
+insert into veiculo (idveiculo, marca, modelo, ano) values (2, 'Buick', 'Skylark', 1991);
+insert into veiculo (idveiculo, marca, modelo, ano) values (3, 'Ford', 'Crown Victoria', 1995);
+insert into veiculo (idveiculo, marca, modelo, ano) values (4, 'Mercedes-Benz', 'S-Class', 2009);
+insert into veiculo (idveiculo, marca, modelo, ano) values (5, 'Mercury', 'Topaz', 1992);
+insert into veiculo (idveiculo, marca, modelo, ano) values (6, 'Mitsubishi', 'Outlander', 2012);
+insert into veiculo (idveiculo, marca, modelo, ano) values (7, 'Bentley', 'Mulsanne', 2012);
+insert into veiculo (idveiculo, marca, modelo, ano) values (8, 'Chevrolet', 'Suburban 1500', 1995);
+insert into veiculo (idveiculo, marca, modelo, ano) values (9, 'Spyker', 'C8', 2005);
+insert into veiculo (idveiculo, marca, modelo, ano) values (10, 'Mercedes-Benz', 'S-Class', 2001);
+insert into veiculo (idveiculo, marca, modelo, ano) values (11, 'Ford', 'Thunderbird', 1995);
+insert into veiculo (idveiculo, marca, modelo, ano) values (12, 'Nissan', 'Titan', 2007);
+
 -- inserts com fk
+
+insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (1, '08:00', '18:00', '82 min', 5);
+insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (2, '08:00', '18:00', '11 min', 10);
+insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (3, '08:00', '18:00', '15 min', 9);
+insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (4, '08:00', '18:00', '67 min', 12);
+insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (5, '08:00', '18:00', '16 min', 6);
+insert into transfer (idtransfer, horainicio, horafim, intervalo, fk_veiculo_idveiculo) values (6, '08:00', '18:00', '79 min', 6);
+
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (1, 'Streamlined dedicated migration', 'Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.', '2020-03-09', 'Clinical Specialist', 3);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (2, 'Universal uniform software', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', '2020-04-22', 'Senior Editor', 6);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (3, 'Operative bifurcated paradigm', 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti. Nullam porttitor lacus at turpis.', '2019-07-25', 'Senior Quality Engineer', 8);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (4, 'Profound mission-critical project', 'In hac habitasse platea dictumst.', '2019-08-15', 'Physical Therapy Assistant', 3);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (5, 'Versatile non-volatile model', 'In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.', '2020-08-21', 'Programmer Analyst I', 10);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (6, 'Phased scalable paradigm', 'Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.', '2019-10-19', 'Software Test Engineer II', 10);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (7, 'Configurable attitude-oriented policy', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.', '2019-10-28', 'Senior Sales Associate', 6);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (8, 'Total directional moderator', 'In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.', '2019-03-24', 'Structural Analysis Engineer', 1);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (9, 'Configurable zero tolerance data-warehouse', 'Donec posuere metus vitae ipsum. Aliquam non mauris.', '2019-08-25', 'Civil Engineer', 3);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (10, 'Future-proofed static firmware', 'In sagittis dui vel nisl. Duis ac nibh.', '2019-10-24', 'Database Administrator I', 4);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (11, 'Multi-channelled tertiary artificial intelligence', 'Vestibulum sed magna at nunc commodo placerat.', '2020-06-12', 'Librarian', 1);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (12, 'Down-sized hybrid project', 'Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi.', '2019-09-19', 'Nurse', 7);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (13, 'Reduced cohesive matrices', 'Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.', '2020-05-31', 'VP Quality Control', 2);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (14, 'Front-line fault-tolerant toolset', 'Aenean auctor gravida sem.', '2019-07-25', 'Director of Sales', 10);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (15, 'Phased attitude-oriented open system', 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci.', '2020-01-09', 'Account Representative III', 9);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (16, 'Ergonomic tangible encryption', 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', '2020-10-14', 'Computer Systems Analyst I', 2);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (17, 'Seamless regional approach', 'Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem. Sed sagittis.', '2019-09-01', 'VP Marketing', 1);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (18, 'Customizable attitude-oriented website', 'Ut at dolor quis odio consequat varius. Integer ac leo.', '2019-11-14', 'Engineer II', 6);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (19, 'Focused leading edge artificial intelligence', 'Vivamus in felis eu sapien cursus vestibulum.', '2020-03-17', 'Payment Adjustment Coordinator', 2);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (20, 'Face to face reciprocal hub', 'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.', '2020-10-31', 'Staff Accountant III', 1);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (21, 'Multi-channelled discrete solution', 'Nullam varius.', '2019-09-04', 'Environmental Tech', 3);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (22, 'Advanced bandwidth-monitored policy', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna.', '2019-10-07', 'Senior Cost Accountant', 2);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (23, 'Triple-buffered multimedia moratorium', 'Etiam pretium iaculis justo.', '2020-11-03', 'Operator', 3);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (24, 'Cross-platform 24 hour strategy', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', '2019-08-02', 'Staff Accountant I', 5);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (25, 'Balanced global array', 'Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', '2019-05-07', 'Desktop Support Technician', 4);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (26, 'Phased dedicated frame', 'Aliquam non mauris. Morbi non lectus.', '2019-07-29', 'Technical Writer', 7);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (27, 'Customizable systemic definition', 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', '2019-04-12', 'Account Representative III', 10);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (28, 'Right-sized real-time knowledge base', 'Nullam varius. Nulla facilisi.', '2020-02-08', 'Administrative Assistant II', 7);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (29, 'Multi-lateral client-server strategy', 'Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus.', '2020-10-10', 'Assistant Professor', 1);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (30, 'Optimized intermediate leverage', 'Praesent blandit lacinia erat.', '2020-10-27', 'Senior Editor', 6);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (31, 'Universal attitude-oriented methodology', 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat.', '2019-12-04', 'Design Engineer', 9);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (32, 'Switchable multi-state help-desk', 'Duis consequat dui nec nisi volutpat eleifend.', '2020-01-19', 'Biostatistician III', 7);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (33, 'Pre-emptive attitude-oriented flexibility', 'Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '2020-08-13', 'Web Developer II', 1);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (34, 'Front-line holistic pricing structure', 'Donec vitae nisi.', '2020-04-24', 'Electrical Engineer', 9);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (35, 'Stand-alone fresh-thinking artificial intelligence', 'Donec dapibus.', '2019-07-01', 'Senior Quality Engineer', 2);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (36, 'Proactive encompassing conglomeration', 'Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.', '2020-08-31', 'Chemical Engineer', 4);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (37, 'Function-based regional initiative', 'In eleifend quam a odio. In hac habitasse platea dictumst.', '2019-11-23', 'Geological Engineer', 3);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (38, 'Right-sized optimizing task-force', 'Aliquam erat volutpat. In congue.', '2020-10-18', 'Director of Sales', 4);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (39, 'Phased radical infrastructure', 'In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.', '2019-04-11', 'Structural Engineer', 3);
+insert into atividade (idatividade, nome, descricao, data, publicoalvo, fk_evento_idevento) values (40, 'Right-sized local standardization', 'Phasellus sit amet erat. Nulla tempus.', '2020-05-19', 'Operator', 3);
+
+
+
+insert into tutorial (tema, fk_atividade_idatividade) values ('Natural Gas Distribution', 33);
+insert into tutorial (tema, fk_atividade_idatividade) values ('Major Banks', 34);
+insert into tutorial (tema, fk_atividade_idatividade) values ('Trucking Freight/Courier Services', 35);
+insert into tutorial (tema, fk_atividade_idatividade) values ('Major Banks', 36);
+insert into tutorial (tema, fk_atividade_idatividade) values ('Life Insurance', 37);
+
+insert into workshops (tema, fk_atividade_idatividade) values ('Trucking Freight/Courier Services', 36);
+insert into workshops (tema, fk_atividade_idatividade) values ('Other Consumer Services', 37);
+insert into workshops (tema, fk_atividade_idatividade) values ('Human Resources', 38);
+insert into workshops (tema, fk_atividade_idatividade) values ('Real Estate Investment Trusts', 39);
+insert into workshops (tema, fk_atividade_idatividade) values ('Research and Development', 40);
 
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (1, 'brand seamless applications', 'Fully-configurable logistical system engine', 'https://storify.com/proin/eu/mi/nulla/ac/enim/in.xml', 10251, 0.84, 2);
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (2, 'cultivate proactive initiatives', 'Monitored content-based system engine', 'http://scribd.com/quam/fringilla/rhoncus/mauris/enim/leo.xml', 11508, 0.34, 4);
@@ -292,7 +374,6 @@ insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values (
 insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 5 lilas', 3);
 insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 7 rubi', 4);
 insert into estacaometro (linha, fk_pontodetransporte_idpontodepartida) values ('linha 9 esmeralda', 2);
-
 
 INSERT INTO public.anuncioonline (titulo,descricao,url,acessos,custoporclique) VALUES
 	 ('facilitate intuitive schemas','Compatible empowering knowledge user','http://photobucket.com/ut/erat/curabitur.js',2975,7.12),
