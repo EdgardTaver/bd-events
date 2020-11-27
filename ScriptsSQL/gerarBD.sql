@@ -63,7 +63,8 @@ CREATE TABLE Empresa (
 CREATE TABLE Taxa (
     idTaxa SERIAL PRIMARY KEY,
     Valor NUMERIC,
-    fk_Evento_idEvento SERIAL
+    fk_Evento_idEvento SERIAL,
+    fk_Transacao_idTransacao INTEGER
 );
 
 CREATE TABLE Instalacao (
@@ -462,11 +463,6 @@ CREATE TABLE Recibo (
     ValorParcela NUMERIC,
     fk_FormaDePagamento_idFormaDePagamento INTEGER
 );
-
-CREATE TABLE TransacaoIncluiTaxa (
-    fk_Taxa_idTaxa SERIAL,
-    fk_Transacao_idTransacao INTEGER
-);
  
 ALTER TABLE Plataforma ADD CONSTRAINT FK_Plataforma_2
     FOREIGN KEY (fk_Evento_idEvento)
@@ -506,6 +502,10 @@ ALTER TABLE Taxa ADD CONSTRAINT FK_Taxa_2
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE CASCADE;
+ 
+ALTER TABLE Taxa ADD CONSTRAINT FK_Taxa_3
+    FOREIGN KEY (fk_Transacao_idTransacao)
+    REFERENCES Transacao (idTransacao);
  
 ALTER TABLE Instalacao ADD CONSTRAINT FK_Instalacao_2
     FOREIGN KEY (fk_LocalFisico_fk_Plataforma_idPlataforma)
@@ -918,12 +918,3 @@ ALTER TABLE Recibo ADD CONSTRAINT FK_Recibo_2
     FOREIGN KEY (fk_FormaDePagamento_idFormaDePagamento)
     REFERENCES FormaDePagamento (idFormaDePagamento)
     ON DELETE RESTRICT;
- 
-ALTER TABLE TransacaoIncluiTaxa ADD CONSTRAINT FK_TransacaoIncluiTaxa_1
-    FOREIGN KEY (fk_Taxa_idTaxa)
-    REFERENCES Taxa (idTaxa)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE TransacaoIncluiTaxa ADD CONSTRAINT FK_TransacaoIncluiTaxa_2
-    FOREIGN KEY (fk_Transacao_idTransacao)
-    REFERENCES Transacao (idTransacao);
