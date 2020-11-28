@@ -55,7 +55,7 @@ CREATE TABLE Conselhos (
 );
 
 CREATE TABLE Empresa (
-    CNPJ INTEGER,
+    CNPJ VARCHAR,
     RazaoSocial VARCHAR,
     fk_Entidade_idEntidade SERIAL PRIMARY KEY
 );
