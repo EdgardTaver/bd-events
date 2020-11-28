@@ -1423,9 +1423,6 @@ insert into publicadoem (fk_redesocial_idredesocial, fk_anuncioonline_idanuncioo
 insert into publicadoem (fk_redesocial_idredesocial, fk_anuncioonline_idanuncioonline, data) values (2, 14, '2020-04-28');
 insert into publicadoem (fk_redesocial_idredesocial, fk_anuncioonline_idanuncioonline, data) values (4, 15, '2020-07-22');
 
--- ATÉ AQUI, TUDO CERTO
--- TABELA ABAIXO COM ERRO
-
 insert into contasapagar (valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (9046.66, 'Ut at dolor quis odio consequat varius.', null, 2);
 insert into contasapagar (valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (1067.36, 'Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 2, null);
 insert into contasapagar (valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (3625.32, 'Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.', 3, null);
@@ -1456,8 +1453,6 @@ insert into contasapagar (valor, descricao, fk_atividade_idatividade, fk_evento_
 insert into contasapagar (valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (6127.23, 'Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.', 10, null);
 insert into contasapagar (valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (679.57, 'Suspendisse potenti. Cras in purus eu magna vulputate luctus.', null, 10);
 insert into contasapagar (valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (8886.03, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.', 10, null);
-
--- ESSE CONTAS A PAGAR TÁ ZUADO
 
 insert into perfilredesocial (nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values ('Hatity', 'http://shinystat.com/donec/ut/dolor/morbi.aspx', 5984, null, 6);
 insert into perfilredesocial (nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values ('Flexidy', 'http://netscape.com/in/purus/eu/magna/vulputate.jpg', 3264, null, 5);
@@ -1510,8 +1505,6 @@ insert into perfilredesocial (nome, url, seguidores, fk_grupomusical_idgrupomusi
 insert into perfilredesocial (nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values ('Job', 'https://time.com/arcu.jsp', 8253, 2, null);
 insert into perfilredesocial (nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values ('Treeflex', 'http://edublogs.org/dui/luctus/rutrum/nulla/tellus/in/sagittis.png', 10839, 1, null);
 
--- TABELA ACIMA ESTRANHA
-
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (2, 1);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (6, 2);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (1, 3);
@@ -1562,5 +1555,3 @@ insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idper
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (3, 48);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (6, 49);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (5, 50);
-
--- TABELA COM ERRO TAMBÉM
