@@ -64,7 +64,7 @@ CREATE TABLE Taxa (
     idTaxa SERIAL PRIMARY KEY,
     Valor NUMERIC,
     fk_Evento_idEvento SERIAL,
-    fk_Transacao_idTransacao INTEGER
+    fk_Transacao_idTransacao SERIAL
 );
 
 CREATE TABLE Instalacao (
@@ -421,40 +421,39 @@ CREATE TABLE LevaAte2 (
 );
 
 CREATE TABLE Transacao (
-    idTransacao INTEGER PRIMARY KEY,
+    idTransacao SERIAL PRIMARY KEY,
     ValorTotal NUMERIC,
     StatusTransacao VARCHAR,
     fk_Pessoa_idPessoa SERIAL
 );
 
 CREATE TABLE NotaFiscal (
-    idNotaFiscal INTEGER,
+    idNotaFiscal SERIAL PRIMARY KEY,
     ValorTotal NUMERIC,
     Data DATE,
     ChaveDeAcesso VARCHAR,
-    fk_Transacao_idTransacao INTEGER,
+    fk_Transacao_idTransacao SERIAL,
     Itens VARCHAR,
     CFOP VARCHAR,
     Numero NUMERIC,
-    ValorImposto NUMERIC,
-    PRIMARY KEY (idNotaFiscal, fk_Transacao_idTransacao)
+    ValorImposto NUMERIC
 );
 
 CREATE TABLE Pagamento (
-    idPagamento INTEGER PRIMARY KEY,
+    idPagamento SERIAL PRIMARY KEY,
     Nome VARCHAR,
     Tipo VARCHAR,
     Valor NUMERIC,
-    fk_Transacao_idTransacao INTEGER,
+    fk_Transacao_idTransacao SERIAL,
     CodigoAdquirente VARCHAR,
     Status VARCHAR
 );
 
 CREATE TABLE Recibo (
-    idRecibo INTEGER PRIMARY KEY,
+    idRecibo SERIAL PRIMARY KEY,
     Parcelas INTEGER,
     ValorParcela NUMERIC,
-    fk_Pagamento_idPagamento INTEGER,
+    fk_Pagamento_idPagamento SERIAL,
     Adquirente VARCHAR,
     CodigoAdquirente VARCHAR,
     Descricao VARCHAR
