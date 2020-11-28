@@ -4,7 +4,7 @@ empresa,taxa,transacao,instalacao,canalstreaming,ingresso,taxaempresa,pacote,con
 certificado,papel,pessoa,tutorial,workshops,palestra,atividadesocial,concurso,reuniao,
 apresentacaodeartigo,artigo,grupomusical,musica,anuncioonline,perfilredesocial,avaliacao,
 pontodetransporte,hotel,restaurante,estacaometro,veiculo,transfer,ocorreem1,contribui,ocorreem2,
-compostopor,beneficio,compostapor1,desconta,desconto,promove,financiadopor1,ministradopor2,
+compostopor,beneficio,compostapor1,desconta,desconto,promove,ministradopor2,
 ministradopor1,palestradapor1,participadapor2,concorridopor,juizadopor,ministradapor,participade,
 escritopor,dirigidopor,playlist,compostapor2,toca,redesocial,publicadoem,registradoem1,levaate1,
 levaate2,notafiscal,pagamento,recibo

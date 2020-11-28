@@ -64,7 +64,8 @@ CREATE TABLE Taxa (
     idTaxa SERIAL PRIMARY KEY,
     Valor NUMERIC,
     fk_Evento_idEvento INTEGER,
-    fk_Transacao_idTransacao INTEGER
+    fk_Transacao_idTransacao INTEGER,
+    fk_Atividade_idAtividade INTEGER
 );
 
 CREATE TABLE Instalacao (
@@ -334,11 +335,6 @@ CREATE TABLE Promove (
     fk_Atividade_idAtividade INTEGER
 );
 
-CREATE TABLE FinanciadoPor1 (
-    fk_Atividade_idAtividade INTEGER,
-    fk_Taxa_idTaxa INTEGER
-);
-
 CREATE TABLE MinistradoPor2 (
     fk_Tutorial_fk_Atividade_idAtividade INTEGER,
     fk_Papel_idPapel INTEGER
@@ -502,6 +498,10 @@ ALTER TABLE Taxa ADD CONSTRAINT FK_Taxa_3
     FOREIGN KEY (fk_Transacao_idTransacao)
     REFERENCES Transacao (idTransacao);
  
+ALTER TABLE Taxa ADD CONSTRAINT FK_Taxa_4
+    FOREIGN KEY (fk_Atividade_idAtividade)
+    REFERENCES Atividade (idAtividade);
+ 
 ALTER TABLE Instalacao ADD CONSTRAINT FK_Instalacao_2
     FOREIGN KEY (fk_LocalFisico_fk_Plataforma_idPlataforma)
     REFERENCES LocalFisico (fk_Plataforma_idPlataforma)
@@ -589,7 +589,7 @@ ALTER TABLE ApresentacaoDeArtigo ADD CONSTRAINT FK_ApresentacaoDeArtigo_3
 ALTER TABLE Musica ADD CONSTRAINT FK_Musica_2
     FOREIGN KEY (fk_GrupoMusical_idGrupoMusical)
     REFERENCES GrupoMusical (idGrupoMusical)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE AnuncioOnline ADD CONSTRAINT FK_AnuncioOnline_2
     FOREIGN KEY (fk_Evento_idEvento)
@@ -710,16 +710,6 @@ ALTER TABLE Promove ADD CONSTRAINT FK_Promove_2
     REFERENCES Atividade (idAtividade)
     ON DELETE SET NULL;
  
-ALTER TABLE FinanciadoPor1 ADD CONSTRAINT FK_FinanciadoPor1_1
-    FOREIGN KEY (fk_Atividade_idAtividade)
-    REFERENCES Atividade (idAtividade)
-    ON DELETE SET NULL;
- 
-ALTER TABLE FinanciadoPor1 ADD CONSTRAINT FK_FinanciadoPor1_2
-    FOREIGN KEY (fk_Taxa_idTaxa)
-    REFERENCES Taxa (idTaxa)
-    ON DELETE SET NULL;
- 
 ALTER TABLE MinistradoPor2 ADD CONSTRAINT FK_MinistradoPor2_1
     FOREIGN KEY (fk_Tutorial_fk_Atividade_idAtividade)
     REFERENCES Tutorial (fk_Atividade_idAtividade)
@@ -823,12 +813,12 @@ ALTER TABLE DirigidoPor ADD CONSTRAINT FK_DirigidoPor_2
 ALTER TABLE CompostaPor2 ADD CONSTRAINT FK_CompostaPor2_1
     FOREIGN KEY (fk_Playlist_idPlaylist)
     REFERENCES Playlist (idPlaylist)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE CompostaPor2 ADD CONSTRAINT FK_CompostaPor2_2
     FOREIGN KEY (fk_Musica_idMusica)
     REFERENCES Musica (idMusica)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE Toca ADD CONSTRAINT FK_Toca_1
     FOREIGN KEY (fk_LocalFisico_fk_Plataforma_idPlataforma)
