@@ -1,3 +1,8 @@
+TODO: ainda preciso achar um jeito de um lidar com o fato da chave estrangeira dupla, em contas a pagar, ficar reclamando se uma delas for null.
+
+
+Tabelas prontas:
+
 registradoem1 X
 publicadoem X
 promove X
