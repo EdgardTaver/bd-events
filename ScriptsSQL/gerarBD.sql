@@ -11,20 +11,20 @@ CREATE TABLE Plataforma (
     idPlataforma SERIAL PRIMARY KEY,
     Nome VARCHAR,
     Descricao VARCHAR,
-    fk_Evento_idEvento SERIAL
+    fk_Evento_idEvento INTEGER
 );
 
 CREATE TABLE LocalFisico (
     Telefone VARCHAR,
     Endereco VARCHAR,
     CapacidadeTotal INTEGER,
-    fk_Plataforma_idPlataforma SERIAL PRIMARY KEY
+    fk_Plataforma_idPlataforma INTEGER PRIMARY KEY
 );
 
 CREATE TABLE PortalVirtual (
     Portal VARCHAR,
     Senha VARCHAR,
-    fk_Plataforma_idPlataforma SERIAL PRIMARY KEY
+    fk_Plataforma_idPlataforma INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Atividade (
@@ -33,7 +33,7 @@ CREATE TABLE Atividade (
     Descricao VARCHAR,
     Data DATE,
     PublicoAlvo VARCHAR,
-    fk_Evento_idEvento SERIAL
+    fk_Evento_idEvento INTEGER
 );
 
 CREATE TABLE Entidade (
@@ -45,26 +45,26 @@ CREATE TABLE Entidade (
 
 CREATE TABLE Universidade (
     MEC VARCHAR,
-    fk_Entidade_idEntidade SERIAL PRIMARY KEY,
+    fk_Entidade_idEntidade INTEGER PRIMARY KEY,
     RazaoSocial VARCHAR
 );
 
 CREATE TABLE Conselhos (
     Funcao VARCHAR,
-    fk_Entidade_idEntidade SERIAL PRIMARY KEY
+    fk_Entidade_idEntidade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Empresa (
     CNPJ VARCHAR,
     RazaoSocial VARCHAR,
-    fk_Entidade_idEntidade SERIAL PRIMARY KEY
+    fk_Entidade_idEntidade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Taxa (
     idTaxa SERIAL PRIMARY KEY,
     Valor NUMERIC,
-    fk_Evento_idEvento SERIAL,
-    fk_Transacao_idTransacao SERIAL
+    fk_Evento_idEvento INTEGER,
+    fk_Transacao_idTransacao INTEGER
 );
 
 CREATE TABLE Instalacao (
@@ -72,27 +72,27 @@ CREATE TABLE Instalacao (
     Nome VARCHAR,
     Tipo VARCHAR,
     Capacidade INTEGER,
-    fk_LocalFisico_fk_Plataforma_idPlataforma SERIAL
+    fk_LocalFisico_fk_Plataforma_idPlataforma INTEGER
 );
 
 CREATE TABLE CanalStreaming (
     idStreaming SERIAL PRIMARY KEY,
     Titulo VARCHAR,
     URL VARCHAR,
-    fk_PortalVirtual_fk_Plataforma_idPlataforma SERIAL
+    fk_PortalVirtual_fk_Plataforma_idPlataforma INTEGER
 );
 
 CREATE TABLE Ingresso (
     Numero INTEGER,
     Lote INTEGER,
-    fk_Taxa_idTaxa SERIAL PRIMARY KEY
+    fk_Taxa_idTaxa INTEGER PRIMARY KEY
 );
 
 CREATE TABLE TaxaEmpresa (
     Descricao VARCHAR,
     Categoria VARCHAR,
-    fk_Taxa_idTaxa SERIAL PRIMARY KEY,
-    fk_Pacote_idPacote SERIAL
+    fk_Taxa_idTaxa INTEGER PRIMARY KEY,
+    fk_Pacote_idPacote INTEGER
 );
 
 CREATE TABLE Pacote (
@@ -125,16 +125,16 @@ CREATE TABLE ContasAPagar (
     idContas SERIAL PRIMARY KEY,
     Valor NUMERIC,
     Descricao VARCHAR,
-    fk_Atividade_idAtividade SERIAL,
-    fk_Evento_idEvento SERIAL
+    fk_Atividade_idAtividade INTEGER,
+    fk_Evento_idEvento INTEGER
 );
 
 CREATE TABLE Papel (
     idPapel SERIAL PRIMARY KEY,
     Funcao VARCHAR,
     Descricao VARCHAR,
-    fk_Certificado_idCertificado SERIAL,
-    fk_Pessoa_idPessoa SERIAL
+    fk_Certificado_idCertificado INTEGER,
+    fk_Pessoa_idPessoa INTEGER
 );
 
 CREATE TABLE Certificado (
@@ -146,43 +146,43 @@ CREATE TABLE Certificado (
 
 CREATE TABLE Tutorial (
     Tema VARCHAR,
-    fk_Atividade_idAtividade SERIAL PRIMARY KEY
+    fk_Atividade_idAtividade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Workshops (
     Tema VARCHAR,
-    fk_Atividade_idAtividade SERIAL PRIMARY KEY
+    fk_Atividade_idAtividade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Palestra (
     Afiliacao VARCHAR,
     NomeDaPalestra VARCHAR,
     Minicurriculo VARCHAR,
-    fk_Atividade_idAtividade SERIAL PRIMARY KEY
+    fk_Atividade_idAtividade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE AtividadeSocial (
     Tipo VARCHAR,
     Tema VARCHAR,
-    fk_Atividade_idAtividade SERIAL PRIMARY KEY
+    fk_Atividade_idAtividade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Concurso (
     Regras VARCHAR,
     Tema VARCHAR,
     Premiacoes VARCHAR,
-    fk_Atividade_idAtividade SERIAL PRIMARY KEY
+    fk_Atividade_idAtividade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Reuniao (
     Objetivo VARCHAR,
-    fk_Atividade_idAtividade SERIAL PRIMARY KEY
+    fk_Atividade_idAtividade INTEGER PRIMARY KEY
 );
 
 CREATE TABLE ApresentacaoDeArtigo (
     Tema VARCHAR,
-    fk_Atividade_idAtividade SERIAL PRIMARY KEY,
-    fk_Artigo_idArtigo SERIAL
+    fk_Atividade_idAtividade INTEGER PRIMARY KEY,
+    fk_Artigo_idArtigo INTEGER
 );
 
 CREATE TABLE Artigo (
@@ -208,7 +208,7 @@ CREATE TABLE Musica (
     DuracaoSegundos INTEGER,
     Plays NUMERIC,
     Genero VARCHAR,
-    fk_GrupoMusical_idGrupoMusical SERIAL
+    fk_GrupoMusical_idGrupoMusical INTEGER
 );
 
 CREATE TABLE GrupoMusical (
@@ -225,7 +225,7 @@ CREATE TABLE AnuncioOnline (
     URL VARCHAR,
     Acessos INTEGER,
     CustoPorClique NUMERIC,
-    fk_Evento_idEvento SERIAL
+    fk_Evento_idEvento INTEGER
 );
 
 CREATE TABLE PerfilRedeSocial (
@@ -233,8 +233,8 @@ CREATE TABLE PerfilRedeSocial (
     URL VARCHAR,
     idPerfilRedeSocial SERIAL PRIMARY KEY,
     Seguidores INTEGER,
-    fk_GrupoMusical_idGrupoMusical SERIAL,
-    fk_Evento_idEvento SERIAL
+    fk_GrupoMusical_idGrupoMusical INTEGER,
+    fk_Evento_idEvento INTEGER
 );
 
 CREATE TABLE RedeSocial (
@@ -250,9 +250,9 @@ CREATE TABLE Avaliacao (
     Nota INTEGER,
     Comentario VARCHAR,
     Data DATE,
-    fk_Atividade_idAtividade SERIAL,
-    fk_Evento_idEvento SERIAL,
-    fk_Pessoa_idPessoa SERIAL
+    fk_Atividade_idAtividade INTEGER,
+    fk_Evento_idEvento INTEGER,
+    fk_Pessoa_idPessoa INTEGER
 );
 
 CREATE TABLE PontoDeTransporte (
@@ -265,18 +265,18 @@ CREATE TABLE PontoDeTransporte (
 CREATE TABLE Hotel (
     Estrelas INTEGER,
     Quartos INTEGER,
-    fk_PontoDeTransporte_idPontoDePartida SERIAL PRIMARY KEY
+    fk_PontoDeTransporte_idPontoDePartida INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Restaurante (
     Estrelas INTEGER,
     TipoCulinaria VARCHAR,
-    fk_PontoDeTransporte_idPontoDePartida SERIAL PRIMARY KEY
+    fk_PontoDeTransporte_idPontoDePartida INTEGER PRIMARY KEY
 );
 
 CREATE TABLE EstacaoMetro (
     Linha VARCHAR,
-    fk_PontoDeTransporte_idPontoDePartida SERIAL PRIMARY KEY
+    fk_PontoDeTransporte_idPontoDePartida INTEGER PRIMARY KEY
 );
 
 CREATE TABLE Transfer (
@@ -284,7 +284,7 @@ CREATE TABLE Transfer (
     HoraInicio TIME,
     HoraFim TIME,
     Intervalo TIME,
-    fk_Veiculo_idVeiculo SERIAL
+    fk_Veiculo_idVeiculo INTEGER
 );
 
 CREATE TABLE Veiculo (
@@ -295,136 +295,136 @@ CREATE TABLE Veiculo (
 );
 
 CREATE TABLE OcorreEm1 (
-    fk_Instalacao_idInstalacao SERIAL,
-    fk_Atividade_idAtividade SERIAL,
+    fk_Instalacao_idInstalacao INTEGER,
+    fk_Atividade_idAtividade INTEGER,
     HorarioInicio TIME,
     HorarioFim TIME
 );
 
 CREATE TABLE Contribui (
-    fk_Entidade_idEntidade SERIAL,
-    fk_Evento_idEvento SERIAL,
+    fk_Entidade_idEntidade INTEGER,
+    fk_Evento_idEvento INTEGER,
     Tipo VARCHAR
 );
 
 CREATE TABLE OcorreEm2 (
-    fk_CanalStreaming_idStreaming SERIAL,
-    fk_Atividade_idAtividade SERIAL,
+    fk_CanalStreaming_idStreaming INTEGER,
+    fk_Atividade_idAtividade INTEGER,
     HorarioInicio TIME,
     HorarioFim TIME
 );
 
 CREATE TABLE CompostoPor (
-    fk_Pacote_idPacote SERIAL,
-    fk_Beneficio_idBeneficio SERIAL
+    fk_Pacote_idPacote INTEGER,
+    fk_Beneficio_idBeneficio INTEGER
 );
 
 CREATE TABLE CompostaPor1 (
-    fk_Pessoa_idPessoa SERIAL,
-    fk_Entidade_idEntidade SERIAL
+    fk_Pessoa_idPessoa INTEGER,
+    fk_Entidade_idEntidade INTEGER
 );
 
 CREATE TABLE Desconta (
-    fk_Taxa_idTaxa SERIAL,
-    fk_Desconto_idDesconto SERIAL
+    fk_Taxa_idTaxa INTEGER,
+    fk_Desconto_idDesconto INTEGER
 );
 
 CREATE TABLE Promove (
-    fk_Entidade_idEntidade SERIAL,
-    fk_Atividade_idAtividade SERIAL
+    fk_Entidade_idEntidade INTEGER,
+    fk_Atividade_idAtividade INTEGER
 );
 
 CREATE TABLE FinanciadoPor1 (
-    fk_Atividade_idAtividade SERIAL,
-    fk_Taxa_idTaxa SERIAL
+    fk_Atividade_idAtividade INTEGER,
+    fk_Taxa_idTaxa INTEGER
 );
 
 CREATE TABLE MinistradoPor2 (
-    fk_Tutorial_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_Tutorial_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE MinistradoPor1 (
-    fk_Workshops_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_Workshops_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE PalestradaPor1 (
-    fk_Palestra_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_Palestra_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE ParticipadaPor2 (
-    fk_AtividadeSocial_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_AtividadeSocial_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE ConcorridoPor (
-    fk_Concurso_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_Concurso_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE JuizadoPor (
-    fk_Concurso_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_Concurso_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE MinistradaPor (
-    fk_Reuniao_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_Reuniao_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE ParticipaDe (
-    fk_Reuniao_fk_Atividade_idAtividade SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_Reuniao_fk_Atividade_idAtividade INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE EscritoPor (
-    fk_Papel_idPapel SERIAL,
-    fk_Artigo_idArtigo SERIAL
+    fk_Papel_idPapel INTEGER,
+    fk_Artigo_idArtigo INTEGER
 );
 
 CREATE TABLE DirigidoPor (
-    fk_ApresentacaoDeArtigo_idApresentacaoDeArtigo SERIAL,
-    fk_Papel_idPapel SERIAL
+    fk_ApresentacaoDeArtigo_idApresentacaoDeArtigo INTEGER,
+    fk_Papel_idPapel INTEGER
 );
 
 CREATE TABLE CompostaPor2 (
-    fk_Playlist_idPlaylist SERIAL,
-    fk_Musica_idMusica SERIAL
+    fk_Playlist_idPlaylist INTEGER,
+    fk_Musica_idMusica INTEGER
 );
 
 CREATE TABLE Toca (
-    fk_LocalFisico_fk_Plataforma_idPlataforma SERIAL,
-    fk_Playlist_idPlaylist SERIAL
+    fk_LocalFisico_fk_Plataforma_idPlataforma INTEGER,
+    fk_Playlist_idPlaylist INTEGER
 );
 
 CREATE TABLE PublicadoEm (
-    fk_RedeSocial_idRedeSocial SERIAL,
-    fk_AnuncioOnline_idAnuncioOnline SERIAL,
+    fk_RedeSocial_idRedeSocial INTEGER,
+    fk_AnuncioOnline_idAnuncioOnline INTEGER,
     Data TIMESTAMP
 );
 
 CREATE TABLE RegistradoEm1 (
-    fk_RedeSocial_idRedeSocial SERIAL,
-    fk_PerfilRedeSocial_idPerfilRedeSocial SERIAL
+    fk_RedeSocial_idRedeSocial INTEGER,
+    fk_PerfilRedeSocial_idPerfilRedeSocial INTEGER
 );
 
 CREATE TABLE LevaAte1 (
-    fk_PontoDeTransporte_idPontoDePartida SERIAL,
-    fk_Transfer_idTransfer SERIAL
+    fk_PontoDeTransporte_idPontoDePartida INTEGER,
+    fk_Transfer_idTransfer INTEGER
 );
 
 CREATE TABLE LevaAte2 (
-    fk_Transfer_idTransfer SERIAL,
-    fk_LocalFisico_fk_Plataforma_idPlataforma SERIAL
+    fk_Transfer_idTransfer INTEGER,
+    fk_LocalFisico_fk_Plataforma_idPlataforma INTEGER
 );
 
 CREATE TABLE Transacao (
     idTransacao SERIAL PRIMARY KEY,
     ValorTotal NUMERIC,
     StatusTransacao VARCHAR,
-    fk_Pessoa_idPessoa SERIAL
+    fk_Pessoa_idPessoa INTEGER
 );
 
 CREATE TABLE NotaFiscal (
@@ -432,7 +432,7 @@ CREATE TABLE NotaFiscal (
     ValorTotal NUMERIC,
     Data DATE,
     ChaveDeAcesso VARCHAR,
-    fk_Transacao_idTransacao SERIAL,
+    fk_Transacao_idTransacao INTEGER,
     Itens VARCHAR,
     CFOP VARCHAR,
     Numero NUMERIC,
@@ -444,7 +444,7 @@ CREATE TABLE Pagamento (
     Nome VARCHAR,
     Tipo VARCHAR,
     Valor NUMERIC,
-    fk_Transacao_idTransacao SERIAL,
+    fk_Transacao_idTransacao INTEGER,
     CodigoAdquirente VARCHAR,
     Status VARCHAR
 );
@@ -453,7 +453,7 @@ CREATE TABLE Recibo (
     idRecibo SERIAL PRIMARY KEY,
     Parcelas INTEGER,
     ValorParcela NUMERIC,
-    fk_Pagamento_idPagamento SERIAL,
+    fk_Pagamento_idPagamento INTEGER,
     Adquirente VARCHAR,
     CodigoAdquirente VARCHAR,
     Descricao VARCHAR
