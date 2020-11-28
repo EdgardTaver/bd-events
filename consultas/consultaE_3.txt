@@ -1,0 +1,40 @@
+# Consulta 3
+
+Enunciado:
+
+O time de Finanças deseja realizar a conciliação bancária dos custos dos eventos. Para isso, eles precisam da soma das contas a pagar de todos os eventos. O relatório deve, inclusive, conter eventos que podem não possuir contas a pagar registradas.
+
+---
+
+## SQL
+
+```
+SELECT SUM(contasapagar.valor) AS custo_total, tema, nome, edicao FROM contasapagar
+RIGHT JOIN evento ON contasapagar.fk_evento_idevento = evento.idevento
+GROUP BY evento.idevento
+```
+
+---
+
+## Resultados esperados
+
+A tabela `evento` possui 10 tuplas. Então o resultado final da consulta deve conter exatamente 10 tuplas.
+
+A tabela `contasapagar` possui 40 tuplas. Destas, a metade (20 tuplas) possui uma chave estrangeira para `evento`. Ou seja, são 20 contas a pagar que pertencem a eventos, e não a atividades.
+
+Destas 20 tuplas, temos apenas 8 valores distintos para a chave estrangeira de evento. Isso significa que 8 eventos possuem contas a pagar, e 2 eventos não possuem nenhuma conta a pagar registrada.
+
+O resultado final deve ser este:
+
+custo_total|tema                 |nome                                           |edicao|
+-----------|---------------------|-----------------------------------------------|------|
+36230.86   |Consumer Non-Durables|Triple-buffered bandwidth-monitored utilisation|2019  |
+9676.74    |Public Utilities     |Vision-oriented bandwidth-monitored capacity   |2020  |
+           |Basic Industries     |Upgradable multimedia time-frame               |2019  |
+18351.42   |Consumer Services    |Front-line zero tolerance archive              |2019  |
+           |Finance              |Automated full-range protocol                  |2019  |
+7984.06    |Health Care          |Cloned attitude-oriented encoding              |2019  |
+2169.87    |Health Care          |Synchronised national task-force               |2020  |
+3982.15    |Consumer Services    |Organic intermediate adapter                   |2019  |
+10495.34   |Finance              |Open-source holistic installation              |2020  |
+18751.00   |Consumer Non-Durables|Reduced executive collaboration                |2019  |
