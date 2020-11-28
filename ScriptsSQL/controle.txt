@@ -1,43 +1,22 @@
-
-compostapor1
-compostapor2
-compostopor
-contribui
-dirigidopor
-escritopor
-exerce
-financiadopor1
-levaate1
-levaate2
-ministradapor
-ministradopor1
-ministradopor2
-
-ocorreem1
-ocorreem2
-
-
-
-palestradapor1
-
-papel
-
-participadapor2
-participade
-
-promove
-publicadoem
-registradoem1
-
-
-
-
-
-
-
-
-
-
+registradoem1 X
+publicadoem X
+promove X
+ocorreem2 X
+ocorreem1 X
+participadapor2 X
+palestradapor1 X
+ministradopor2 X
+ministradopor1 X
+ministradapor X
+levaate2 X
+levaate1 X
+financiadopor1 X
+escritopor X
+dirigidopor x 
+contribui X
+compostopor X
+compostapor2 X
+compostapor1 X
 anuncioonline X
 apresentacaodeartigo X
 atividade X
@@ -87,3 +66,4 @@ musica X
 perfilredesocial X
 playlist X
 pacote X
+papel X
