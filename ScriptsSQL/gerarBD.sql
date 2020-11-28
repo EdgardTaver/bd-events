@@ -828,7 +828,7 @@ ALTER TABLE Toca ADD CONSTRAINT FK_Toca_1
 ALTER TABLE Toca ADD CONSTRAINT FK_Toca_2
     FOREIGN KEY (fk_Playlist_idPlaylist)
     REFERENCES Playlist (idPlaylist)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE PublicadoEm ADD CONSTRAINT FK_PublicadoEm_1
     FOREIGN KEY (fk_RedeSocial_idRedeSocial)
