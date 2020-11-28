@@ -133,7 +133,8 @@ CREATE TABLE Papel (
     idPapel SERIAL PRIMARY KEY,
     Funcao VARCHAR,
     Descricao VARCHAR,
-    fk_Certificado_idCertificado SERIAL
+    fk_Certificado_idCertificado SERIAL,
+    fk_Pessoa_idPessoa SERIAL
 );
 
 CREATE TABLE Certificado (
@@ -323,11 +324,6 @@ CREATE TABLE CompostaPor1 (
 CREATE TABLE Desconta (
     fk_Taxa_idTaxa SERIAL,
     fk_Desconto_idDesconto SERIAL
-);
-
-CREATE TABLE Exerce (
-    fk_Papel_idPapel SERIAL,
-    fk_Pessoa_idPessoa SERIAL
 );
 
 CREATE TABLE Promove (
@@ -544,6 +540,10 @@ ALTER TABLE Papel ADD CONSTRAINT FK_Papel_2
     REFERENCES Certificado (idCertificado)
     ON DELETE CASCADE;
  
+ALTER TABLE Papel ADD CONSTRAINT FK_Papel_3
+    FOREIGN KEY (fk_Pessoa_idPessoa)
+    REFERENCES Pessoa (idPessoa);
+ 
 ALTER TABLE Tutorial ADD CONSTRAINT FK_Tutorial_2
     FOREIGN KEY (fk_Atividade_idAtividade)
     REFERENCES Atividade (idAtividade)
@@ -696,16 +696,6 @@ ALTER TABLE Desconta ADD CONSTRAINT FK_Desconta_1
 ALTER TABLE Desconta ADD CONSTRAINT FK_Desconta_2
     FOREIGN KEY (fk_Desconto_idDesconto)
     REFERENCES Desconto (idDesconto)
-    ON DELETE SET NULL;
- 
-ALTER TABLE Exerce ADD CONSTRAINT FK_Exerce_1
-    FOREIGN KEY (fk_Papel_idPapel)
-    REFERENCES Papel (idPapel)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE Exerce ADD CONSTRAINT FK_Exerce_2
-    FOREIGN KEY (fk_Pessoa_idPessoa)
-    REFERENCES Pessoa (idPessoa)
     ON DELETE SET NULL;
  
 ALTER TABLE Promove ADD CONSTRAINT FK_Promove_1
