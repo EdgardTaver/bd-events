@@ -754,8 +754,6 @@ insert into workshops (tema, fk_atividade_idatividade) values ('Human Resources'
 insert into workshops (tema, fk_atividade_idatividade) values ('Real Estate Investment Trusts', 35);
 insert into workshops (tema, fk_atividade_idatividade) values ('Research and Development', 36);
 
-
-
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (1, 'brand seamless applications', 'Fully-configurable logistical system engine', 'https://storify.com/proin/eu/mi/nulla/ac/enim/in.xml', 10251, 0.84, 2);
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (2, 'cultivate proactive initiatives', 'Monitored content-based system engine', 'http://scribd.com/quam/fringilla/rhoncus/mauris/enim/leo.xml', 11508, 0.34, 4);
 insert into anuncioonline  (idanuncioonline, titulo, descricao, url, acessos, custoporclique, fk_evento_idevento) values (3, 'morph efficient systems', 'Mandatory non-volatile Graphical User Interface', 'https://yahoo.co.jp/id/pretium/iaculis/diam/erat/fermentum/justo.html', 11309, 3.8, 1);
@@ -953,42 +951,6 @@ insert into juizadopor (fk_concurso_fk_atividade_idatividade, fk_papel_idpapel) 
 insert into juizadopor (fk_concurso_fk_atividade_idatividade, fk_papel_idpapel) values (11, 8);
 insert into juizadopor (fk_concurso_fk_atividade_idatividade, fk_papel_idpapel) values (12, 8);
 
--- ATÉ AQUI, TUDO FUNCIONA
-
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (1, 9046.66, 'Ut at dolor quis odio consequat varius.', null, 2);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (2, 1067.36, 'Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 2, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (3, 3625.32, 'Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.', 3, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (4, 3982.15, 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', null, 7);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (5, 2169.87, 'Cras in purus eu magna vulputate luctus.', null, 5);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (6, 4458.55, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', null, 10);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (7, 4607.41, 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', null, 4);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (8, 4538.62, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.', null, 10);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (9, 1589.41, 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', 6, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (10, 8105.38, 'Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', null, 8);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (11, 2032.15, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.', null, 8);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (12, 8677.13, 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', null, 4);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (13, 6857.09, 'In hac habitasse platea dictumst.', null, 1);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (14, 1954.4, 'Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 3, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (15, 2806.66, 'In quis justo.', 9, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (16, 8138.74, 'Proin at turpis a pede posuere nonummy.', null, 2);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (17, 9321.18, 'Vestibulum sed magna at nunc commodo placerat.', 10, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (18, 8315.84, 'Nunc rhoncus dui vel sem.', null, 8);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (19, 1166.02, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.', null, 2);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (20, 3988.57, 'Quisque id justo sit amet sapien dignissim vestibulum.', 3, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (21, 7321.67, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', null, 4);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (22, 3638.25, 'In hac habitasse platea dictumst.', null, 1);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (23, 7741.62, 'Quisque porta volutpat erat.', null, 4);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (24, 9353.05, 'Maecenas pulvinar lobortis est. Phasellus sit amet erat.', 7, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (25, 7883.03, 'Quisque ut erat.', null, 4);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (26, 297.63, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', null, 8);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (27, 7984.06, 'Duis mattis egestas metus.', null, 3);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (28, 6127.23, 'Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.', 10, null);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (29, 679.57, 'Suspendisse potenti. Cras in purus eu magna vulputate luctus.', null, 10);
-insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (30, 8886.03, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.', 10, null);
-
--- ESSE CONTAS A PAGAR TÁ ZUADO
--- DAQUI EM DIANTE, TUDO OK
-
 insert into desconta (fk_taxa_idtaxa, fk_desconto_iddesconto) values (9, 11);
 insert into desconta (fk_taxa_idtaxa, fk_desconto_iddesconto) values (4, 3);
 insert into desconta (fk_taxa_idtaxa, fk_desconto_iddesconto) values (4, 7);
@@ -1159,63 +1121,6 @@ insert into musica (idmusica, nome, ano, duracaosegundos, plays, genero, fk_grup
 insert into musica (idmusica, nome, ano, duracaosegundos, plays, genero, fk_grupomusical_idgrupomusical) values (73, 'Big Top Pee-Wee', 1990, 367, 57, 'Adventure|Children|Comedy', 3);
 insert into musica (idmusica, nome, ano, duracaosegundos, plays, genero, fk_grupomusical_idgrupomusical) values (74, 'Unfair Competition (Concorrenza sleale)', 2000, 471, 42, 'Drama|War', 12);
 insert into musica (idmusica, nome, ano, duracaosegundos, plays, genero, fk_grupomusical_idgrupomusical) values (75, 'La Première étoile', 1996, 539, 59, 'Comedy', 8);
-
--- ATÉ AQUI, TUDO OK --
--- TABELA ABAIXO FALHANDO PELO MOTIVO DAS FKS NÃO PODEREM SER NULL --
-
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (1, 'Hatity', 'http://shinystat.com/donec/ut/dolor/morbi.aspx', 5984, null, 6);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (2, 'Flexidy', 'http://netscape.com/in/purus/eu/magna/vulputate.jpg', 3264, null, 5);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (3, 'Andalax', 'https://cbc.ca/dapibus/dolor/vel/est/donec/odio.xml', 3983, null, 2);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (4, 'Y-find', 'https://tumblr.com/dolor/sit/amet/consectetuer/adipiscing/elit.html', 5355, null, 7);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (5, 'Prodder', 'http://cam.ac.uk/lacus/curabitur/at/ipsum/ac.js', 3042, null, 8);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (6, 'Toughjoyfax', 'https://nydailynews.com/faucibus/accumsan/odio/curabitur/convallis/duis/consequat.png', 12033, null, 7);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (7, 'Regrant', 'https://wsj.com/ridiculus/mus/etiam/vel/augue/vestibulum/rutrum.html', 11441, null, 5);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (8, 'Bamity', 'https://cloudflare.com/semper/sapien/a/libero/nam/dui.jsp', 10273, null, 2);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (9, 'Lotstring', 'http://clickbank.net/quam/pharetra/magna.xml', 4585, null, 9);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (10, 'Konklux', 'http://techcrunch.com/sapien/varius.xml', 9544, null, 9);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (11, 'Keylex', 'https://com.com/accumsan/odio.html', 9325, null, 2);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (12, 'Flexidy', 'https://usatoday.com/erat/curabitur/gravida/nisi/at/nibh/in.html', 6963, null, 1);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (13, 'Span', 'http://yahoo.co.jp/viverra.aspx', 11381, null, 8);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (14, 'Tresom', 'http://nasa.gov/vel/nulla/eget/eros/elementum.png', 7382, null, 8);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (15, 'Andalax', 'https://cdc.gov/quisque/ut/erat.json', 9825, null, 8);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (16, 'Regrant', 'https://stanford.edu/leo/maecenas/pulvinar/lobortis/est.json', 10301, null, 3);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (17, 'Stringtough', 'https://businesswire.com/consequat/nulla/nisl/nunc/nisl.js', 11760, null, 8);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (18, 'Ronstring', 'http://google.ru/risus/praesent/lectus/vestibulum/quam/sapien.js', 1925, null, 1);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (19, 'Duobam', 'http://yolasite.com/arcu.xml', 5279, null, 2);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (20, 'Veribet', 'https://phpbb.com/orci/pede.jpg', 9804, null, 5);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (21, 'Voltsillam', 'http://addtoany.com/vestibulum/eget/vulputate.html', 12034, null, 10);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (22, 'Flowdesk', 'http://cmu.edu/vel/lectus/in/quam.png', 11004, null, 3);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (23, 'Prodder', 'http://unicef.org/quam/pede/lobortis/ligula/sit/amet/eleifend.json', 7691, null, 9);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (24, 'Tresom', 'https://clickbank.net/commodo/vulputate/justo/in/blandit/ultrices.html', 3573, null, 2);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (25, 'Daltfresh', 'https://loc.gov/sagittis/nam/congue/risus/semper/porta/volutpat.html', 4976, null, 10);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (26, 'Subin', 'https://topsy.com/amet/nulla.aspx', 10221, 7, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (27, 'Andalax', 'https://ebay.co.uk/vulputate/justo/in/blandit/ultrices/enim.html', 4691, 7, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (28, 'Voltsillam', 'https://gmpg.org/in/porttitor/pede.jpg', 10900, 6, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (29, 'Prodder', 'https://chronoengine.com/nibh/ligula.jsp', 4818, 6, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (30, 'Rank', 'https://google.es/viverra.js', 10546, 12, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (31, 'Stringtough', 'http://unblog.fr/aliquet/massa/id/lobortis.js', 8238, 6, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (32, 'Konklab', 'http://xing.com/elementum/ligula/vehicula.json', 6643, 5, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (33, 'Zathin', 'https://ibm.com/aliquam/augue/quam/sollicitudin.xml', 11730, 1, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (34, 'Zathin', 'http://ihg.com/at/lorem/integer/tincidunt/ante.jsp', 2224, 11, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (35, 'Tres-Zap', 'https://tiny.cc/nulla/suspendisse/potenti/cras/in/purus/eu.xml', 7789, 1, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (36, 'Matsoft', 'https://ebay.com/ultrices/enim/lorem.js', 8822, 6, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (37, 'Alphazap', 'http://adobe.com/orci/luctus/et/ultrices/posuere/cubilia/curae.aspx', 2142, 2, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (38, 'Redhold', 'http://privacy.gov.au/id/justo.html', 2115, 1, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (39, 'Temp', 'https://netscape.com/nam/congue/risus/semper.jpg', 12228, 3, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (40, 'Veribet', 'https://sfgate.com/blandit/nam/nulla/integer/pede/justo/lacinia.jsp', 8743, 11, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (41, 'Rank', 'http://mapy.cz/semper/rutrum/nulla.jsp', 10018, 3, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (42, 'Prodder', 'https://mediafire.com/orci/mauris/lacinia/sapien/quis.jsp', 4370, 3, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (43, 'Stronghold', 'https://homestead.com/sit.html', 11236, 8, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (44, 'Solarbreeze', 'https://cbc.ca/varius/integer/ac/leo/pellentesque.aspx', 1857, 6, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (45, 'Bytecard', 'https://hostgator.com/vel.html', 3017, 6, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (46, 'Zontrax', 'http://rediff.com/adipiscing/elit/proin.html', 7095, 8, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (47, 'Vagram', 'http://prlog.org/mauris/non/ligula.js', 6765, 9, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (48, 'Cardguard', 'http://elpais.com/quam/pede/lobortis/ligula/sit/amet/eleifend.jpg', 3782, 8, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (49, 'Job', 'https://time.com/arcu.jsp', 8253, 2, null);
-insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (50, 'Treeflex', 'http://edublogs.org/dui/luctus/rutrum/nulla/tellus/in/sagittis.png', 10839, 1, null);
-
--- TABELA ACIMA ESTRANHA
--- MAS PRA BAIXO, TUDO CERTO
 
 insert into compostapor1 (fk_pessoa_idpessoa, fk_entidade_identidade) values (2, 1);
 insert into compostapor1 (fk_pessoa_idpessoa, fk_entidade_identidade) values (40, 10);
@@ -1521,6 +1426,92 @@ insert into publicadoem (fk_redesocial_idredesocial, fk_anuncioonline_idanuncioo
 -- ATÉ AQUI, TUDO CERTO
 -- TABELA ABAIXO COM ERRO
 
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (1, 9046.66, 'Ut at dolor quis odio consequat varius.', null, 2);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (2, 1067.36, 'Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 2, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (3, 3625.32, 'Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.', 3, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (4, 3982.15, 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', null, 7);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (5, 2169.87, 'Cras in purus eu magna vulputate luctus.', null, 5);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (6, 4458.55, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', null, 10);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (7, 4607.41, 'Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.', null, 4);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (8, 4538.62, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.', null, 10);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (9, 1589.41, 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', 6, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (10, 8105.38, 'Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', null, 8);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (11, 2032.15, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices.', null, 8);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (12, 8677.13, 'Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', null, 4);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (13, 6857.09, 'In hac habitasse platea dictumst.', null, 1);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (14, 1954.4, 'Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 3, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (15, 2806.66, 'In quis justo.', 9, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (16, 8138.74, 'Proin at turpis a pede posuere nonummy.', null, 2);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (17, 9321.18, 'Vestibulum sed magna at nunc commodo placerat.', 10, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (18, 8315.84, 'Nunc rhoncus dui vel sem.', null, 8);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (19, 1166.02, 'Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.', null, 2);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (20, 3988.57, 'Quisque id justo sit amet sapien dignissim vestibulum.', 3, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (21, 7321.67, 'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.', null, 4);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (22, 3638.25, 'In hac habitasse platea dictumst.', null, 1);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (23, 7741.62, 'Quisque porta volutpat erat.', null, 4);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (24, 9353.05, 'Maecenas pulvinar lobortis est. Phasellus sit amet erat.', 7, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (25, 7883.03, 'Quisque ut erat.', null, 4);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (26, 297.63, 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.', null, 8);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (27, 7984.06, 'Duis mattis egestas metus.', null, 3);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (28, 6127.23, 'Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.', 10, null);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (29, 679.57, 'Suspendisse potenti. Cras in purus eu magna vulputate luctus.', null, 10);
+insert into contasapagar (idcontas, valor, descricao, fk_atividade_idatividade, fk_evento_idevento) values (30, 8886.03, 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.', 10, null);
+
+-- ESSE CONTAS A PAGAR TÁ ZUADO
+
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (1, 'Hatity', 'http://shinystat.com/donec/ut/dolor/morbi.aspx', 5984, null, 6);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (2, 'Flexidy', 'http://netscape.com/in/purus/eu/magna/vulputate.jpg', 3264, null, 5);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (3, 'Andalax', 'https://cbc.ca/dapibus/dolor/vel/est/donec/odio.xml', 3983, null, 2);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (4, 'Y-find', 'https://tumblr.com/dolor/sit/amet/consectetuer/adipiscing/elit.html', 5355, null, 7);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (5, 'Prodder', 'http://cam.ac.uk/lacus/curabitur/at/ipsum/ac.js', 3042, null, 8);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (6, 'Toughjoyfax', 'https://nydailynews.com/faucibus/accumsan/odio/curabitur/convallis/duis/consequat.png', 12033, null, 7);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (7, 'Regrant', 'https://wsj.com/ridiculus/mus/etiam/vel/augue/vestibulum/rutrum.html', 11441, null, 5);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (8, 'Bamity', 'https://cloudflare.com/semper/sapien/a/libero/nam/dui.jsp', 10273, null, 2);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (9, 'Lotstring', 'http://clickbank.net/quam/pharetra/magna.xml', 4585, null, 9);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (10, 'Konklux', 'http://techcrunch.com/sapien/varius.xml', 9544, null, 9);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (11, 'Keylex', 'https://com.com/accumsan/odio.html', 9325, null, 2);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (12, 'Flexidy', 'https://usatoday.com/erat/curabitur/gravida/nisi/at/nibh/in.html', 6963, null, 1);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (13, 'Span', 'http://yahoo.co.jp/viverra.aspx', 11381, null, 8);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (14, 'Tresom', 'http://nasa.gov/vel/nulla/eget/eros/elementum.png', 7382, null, 8);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (15, 'Andalax', 'https://cdc.gov/quisque/ut/erat.json', 9825, null, 8);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (16, 'Regrant', 'https://stanford.edu/leo/maecenas/pulvinar/lobortis/est.json', 10301, null, 3);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (17, 'Stringtough', 'https://businesswire.com/consequat/nulla/nisl/nunc/nisl.js', 11760, null, 8);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (18, 'Ronstring', 'http://google.ru/risus/praesent/lectus/vestibulum/quam/sapien.js', 1925, null, 1);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (19, 'Duobam', 'http://yolasite.com/arcu.xml', 5279, null, 2);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (20, 'Veribet', 'https://phpbb.com/orci/pede.jpg', 9804, null, 5);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (21, 'Voltsillam', 'http://addtoany.com/vestibulum/eget/vulputate.html', 12034, null, 10);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (22, 'Flowdesk', 'http://cmu.edu/vel/lectus/in/quam.png', 11004, null, 3);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (23, 'Prodder', 'http://unicef.org/quam/pede/lobortis/ligula/sit/amet/eleifend.json', 7691, null, 9);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (24, 'Tresom', 'https://clickbank.net/commodo/vulputate/justo/in/blandit/ultrices.html', 3573, null, 2);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (25, 'Daltfresh', 'https://loc.gov/sagittis/nam/congue/risus/semper/porta/volutpat.html', 4976, null, 10);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (26, 'Subin', 'https://topsy.com/amet/nulla.aspx', 10221, 7, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (27, 'Andalax', 'https://ebay.co.uk/vulputate/justo/in/blandit/ultrices/enim.html', 4691, 7, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (28, 'Voltsillam', 'https://gmpg.org/in/porttitor/pede.jpg', 10900, 6, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (29, 'Prodder', 'https://chronoengine.com/nibh/ligula.jsp', 4818, 6, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (30, 'Rank', 'https://google.es/viverra.js', 10546, 12, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (31, 'Stringtough', 'http://unblog.fr/aliquet/massa/id/lobortis.js', 8238, 6, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (32, 'Konklab', 'http://xing.com/elementum/ligula/vehicula.json', 6643, 5, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (33, 'Zathin', 'https://ibm.com/aliquam/augue/quam/sollicitudin.xml', 11730, 1, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (34, 'Zathin', 'http://ihg.com/at/lorem/integer/tincidunt/ante.jsp', 2224, 11, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (35, 'Tres-Zap', 'https://tiny.cc/nulla/suspendisse/potenti/cras/in/purus/eu.xml', 7789, 1, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (36, 'Matsoft', 'https://ebay.com/ultrices/enim/lorem.js', 8822, 6, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (37, 'Alphazap', 'http://adobe.com/orci/luctus/et/ultrices/posuere/cubilia/curae.aspx', 2142, 2, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (38, 'Redhold', 'http://privacy.gov.au/id/justo.html', 2115, 1, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (39, 'Temp', 'https://netscape.com/nam/congue/risus/semper.jpg', 12228, 3, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (40, 'Veribet', 'https://sfgate.com/blandit/nam/nulla/integer/pede/justo/lacinia.jsp', 8743, 11, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (41, 'Rank', 'http://mapy.cz/semper/rutrum/nulla.jsp', 10018, 3, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (42, 'Prodder', 'https://mediafire.com/orci/mauris/lacinia/sapien/quis.jsp', 4370, 3, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (43, 'Stronghold', 'https://homestead.com/sit.html', 11236, 8, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (44, 'Solarbreeze', 'https://cbc.ca/varius/integer/ac/leo/pellentesque.aspx', 1857, 6, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (45, 'Bytecard', 'https://hostgator.com/vel.html', 3017, 6, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (46, 'Zontrax', 'http://rediff.com/adipiscing/elit/proin.html', 7095, 8, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (47, 'Vagram', 'http://prlog.org/mauris/non/ligula.js', 6765, 9, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (48, 'Cardguard', 'http://elpais.com/quam/pede/lobortis/ligula/sit/amet/eleifend.jpg', 3782, 8, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (49, 'Job', 'https://time.com/arcu.jsp', 8253, 2, null);
+insert into perfilredesocial (idperfilredesocial, nome, url, seguidores, fk_grupomusical_idgrupomusical, fk_evento_idevento) values (50, 'Treeflex', 'http://edublogs.org/dui/luctus/rutrum/nulla/tellus/in/sagittis.png', 10839, 1, null);
+
+-- TABELA ACIMA ESTRANHA
+
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (2, 1);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (6, 2);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (1, 3);
@@ -1571,3 +1562,5 @@ insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idper
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (3, 48);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (6, 49);
 insert into registradoem1 (fk_redesocial_idredesocial, fk_perfilredesocial_idperfilredesocial) values (5, 50);
+
+-- TABELA COM ERRO TAMBÉM
