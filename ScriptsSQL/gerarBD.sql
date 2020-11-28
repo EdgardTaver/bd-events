@@ -283,7 +283,7 @@ CREATE TABLE Transfer (
     idTransfer SERIAL PRIMARY KEY,
     HoraInicio TIME,
     HoraFim TIME,
-    Intervalo FLOAT,
+    Intervalo TIME,
     fk_Veiculo_idVeiculo SERIAL
 );
 
