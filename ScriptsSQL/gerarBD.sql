@@ -188,7 +188,10 @@ CREATE TABLE ApresentacaoDeArtigo (
 CREATE TABLE Artigo (
     idArtigo SERIAL PRIMARY KEY,
     PublicadoPor VARCHAR,
-    DOI NUMERIC
+    DOI NUMERIC,
+    Titulo VARCHAR,
+    Abstract VARCHAR,
+    Keywords VARCHAR
 );
 
 CREATE TABLE Playlist (
