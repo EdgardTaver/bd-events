@@ -532,14 +532,10 @@ ALTER TABLE ContasAPagar ADD CONSTRAINT FK_ContasAPagar_2
     REFERENCES Atividade (idAtividade)
     ON DELETE CASCADE;
  
-ALTER TABLE ContasAPagar ALTER COLUMN fk_Atividade_idAtividade DROP NOT NULL;
-
 ALTER TABLE ContasAPagar ADD CONSTRAINT FK_ContasAPagar_3
     FOREIGN KEY (fk_Evento_idEvento)
     REFERENCES Evento (idEvento)
     ON DELETE CASCADE;
-
-ALTER TABLE ContasAPagar ALTER COLUMN fk_Evento_idEvento DROP NOT NULL;
  
 ALTER TABLE Papel ADD CONSTRAINT FK_Papel_2
     FOREIGN KEY (fk_Certificado_idCertificado)
