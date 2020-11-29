@@ -1,0 +1,44 @@
+# Consulta 6
+
+Enunciado:
+
+O Comitê Organizador deseja ter uma relação dos participantes e dos juízes de cada um dos concursos realizados. Eles precisam saber o e-mail destas pessoas, para poder mandar uma comunicação personalizada agradecendo pela participação no concurso.
+
+---
+
+## SQL
+
+```
+WITH
+participantes AS (
+SELECT c.fk_atividade_idatividade as concurso_id, c.tema, p2.nome as participante, p2.email as participante_email FROM concurso c
+INNER JOIN concorridopor cp ON c.fk_atividade_idatividade = cp.fk_concurso_fk_atividade_idatividade
+INNER JOIN papel p ON cp.fk_papel_idpapel = p.idpapel
+INNER JOIN pessoa p2 ON p2.idpessoa = p.fk_pessoa_idpessoa),
+juizes AS (
+SELECT c.fk_atividade_idatividade as concurso_id, c.tema, p2.nome as juiz, p2.email as juiz_email FROM concurso c
+INNER JOIN juizadopor j ON c.fk_atividade_idatividade = j.fk_concurso_fk_atividade_idatividade 
+INNER JOIN papel p ON j.fk_papel_idpapel = p.idpapel 
+INNER JOIN pessoa p2 ON p2.idpessoa = p.fk_pessoa_idpessoa)
+SELECT p.*, j.juiz, j.juiz_email FROM participantes p
+INNER JOIN juizes j ON p.concurso_id = j.concurso_id
+```
+
+---
+
+## Resultados esperados
+
+Todos os consursos possuem sempre alguém que participa (que está concorrendo) e alguém que julga.
+
+A tabela de `concurso` possui 6 tuplas. Esperamos, portanto, que o relatório resultante também contenha 6 tuplas.
+
+Este é o resultado esperado:
+
+concurso_id|tema                                   |participante    |participante_email     |juiz          |juiz_email              |
+-----------|---------------------------------------|----------------|-----------------------|--------------|------------------------|
+7          |Metal Fabrications                     |Courtenay Valero|cvalero5@thetimes.co.uk|Wayne Farrow  |wfarrow7@example.com    |
+12         |Paper                                  |Pen McCall      |pmccall3@delicious.com |Wayne Farrow  |wfarrow7@example.com    |
+11         |Industrial Machinery/Components        |Conn Lesley     |clesley2@yellowbook.com|Wayne Farrow  |wfarrow7@example.com    |
+9          |Medical/Nursing Services               |Pen McCall      |pmccall3@delicious.com |Jerrie Netley |jnetley6@hugedomains.com|
+10         |Computer Software: Prepackaged Software|Pen McCall      |pmccall3@delicious.com |Jerrie Netley |jnetley6@hugedomains.com|
+8          |n/a                                    |Dorey Rennie    |drennie1@discovery.com |Duncan Foyster|dfoyster8@oracle.com    |
