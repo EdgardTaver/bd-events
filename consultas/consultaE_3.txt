@@ -1,6 +1,6 @@
 # Consulta 3
 
-Enunciado:
+## Enunciado
 
 O time de Finanças deseja realizar a conciliação bancária dos custos dos eventos. Para isso, eles precisam da soma das contas a pagar de todos os eventos. O relatório deve, inclusive, conter eventos que podem não possuir contas a pagar registradas.
 

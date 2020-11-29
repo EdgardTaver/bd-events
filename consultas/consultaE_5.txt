@@ -1,6 +1,6 @@
 # Consulta 5
 
-Enunciado:
+## Enunciado
 
 O time de Organização precisa dimensionar e planejar o evento de forma a atender os pacotes de benefícios concedidos às entidades por meio de patrocínios. Para isso, eles precisam de um relatório que informe quais pacotes foram adquiridos, e quais são as entidades que estão sujeitas a eles. O relatório deve conter dados de contato das entidades, para que o time possa conversar com a entidade e fazer combinados prévios, se necessário.
 

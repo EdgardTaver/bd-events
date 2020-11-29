@@ -1,6 +1,6 @@
 # Consulta 1
 
-Enunciado:
+## Enunciado
 
 O time de Marketing do Evento quer analisar as melhores palavras para colocar nos anúncios. Para isso, eles gostariam de saber o custo total de anúncios que contém uma determina palavra ou expressão no título.
 

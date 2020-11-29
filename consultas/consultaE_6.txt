@@ -1,6 +1,6 @@
 # Consulta 6
 
-Enunciado:
+## Enunciado
 
 O Comitê Organizador deseja ter uma relação dos participantes e dos juízes de cada um dos concursos realizados. Eles precisam saber o e-mail destas pessoas, para poder mandar uma comunicação personalizada agradecendo pela participação no concurso.
 

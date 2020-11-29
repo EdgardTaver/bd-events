@@ -1,6 +1,6 @@
 # Consulta 2
 
-Enunciado:
+## Enunciado
 
 O time de RH quer saber os dados dos principais membros que atuam tanto nos bastidores como na linha de frente dos eventos. Estes membros irão receber mensagens de voz parabenizando-os pelos esforços em prol dos eventos.
 

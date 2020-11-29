@@ -1,6 +1,6 @@
 # Consulta 4
 
-Enunciado:
+## Enunciado
 
 Uma pessoa pode dividir o pagamento de seu ingresso ou patrocínio (entidade `taxa`) em 2 ou mais formas de pagamento. É possível pagar uma parte no cartão e outra no boleto, por exemplo. Porém, a processadora de pagamentos cobra porcentagens maiores quando essa divisão ocorre. Ou seja: para o Evento, é mais caro permitir a compra com 2 ou mais formas de pagamento.
 
