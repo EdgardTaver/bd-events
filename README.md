@@ -13,6 +13,12 @@
 - [ ] CRUD.
 - [ ] CRUD em vídeo.
 
+## Bot
+
+Código: Ver [repositório do bot](https://github.com/pedrorault/CRUD-telegram-bot)
+
+Veja funcionando: [Link do telegram](https://t.me/BD2020EACH_Bot)
+
 ## Modelo
 
 Ver [doc do modelo no Drive](https://docs.google.com/document/d/1HVbvhmeU4S9CP4tawIv26YNqxctOHQtZs9GzsLNgihc/edit).
