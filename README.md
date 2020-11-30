@@ -9,7 +9,7 @@
 - [X] Script SQL com os comandos DDL de criação de esquema completo do BD.
 - [X] Comandos DML de inserção de dados nas tabelas.
 - [X] Cada consulta com o seu enunciado e resolução em SQL deve estar em um arquivo TXT conforme solicitado na especificação do trabalho.
-- [ ] Consulta em vídeo.
+- [X] Consulta em vídeo.
 - [ ] CRUD.
 - [ ] CRUD em vídeo.
 
