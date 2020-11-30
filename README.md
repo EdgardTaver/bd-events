@@ -10,6 +10,7 @@
 - [X] Comandos DML de inserção de dados nas tabelas.
 - [X] Cada consulta com o seu enunciado e resolução em SQL deve estar em um arquivo TXT conforme solicitado na especificação do trabalho.
 - [X] Consulta em vídeo.
+- [ ] Refazer e reenviar modelos lógicos e relacional.
 - [ ] CRUD.
 - [ ] CRUD em vídeo.
 
