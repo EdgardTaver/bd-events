@@ -12,9 +12,10 @@ Para, por exemplo, pegar anúncios que contenham a palavra `cultivate`:
 
 ```
 WITH anuncio_preparado as (
-	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total FROM public.anuncioonline
+	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total
+	FROM public.anuncioonline
 )
-SELECT idanuncioonline, SUBSTR(titulo, 2, LENGTH(titulo) - 2), descricao, custo_total FROM anuncio_preparado 
+SELECT idanuncioonline, SUBSTR(titulo, 2, LENGTH(titulo) - 2) as titulo, descricao, custo_total FROM anuncio_preparado 
 WHERE titulo LIKE '% cultivate %'
 ```
 
@@ -22,17 +23,19 @@ WHERE titulo LIKE '% cultivate %'
 
 ```
 WITH anuncio_preparado as (
-	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total FROM public.anuncioonline
+	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total
+	FROM public.anuncioonline
 )
-SELECT idanuncioonline, SUBSTR(titulo, 2, LENGTH(titulo) - 2), descricao, custo_total FROM anuncio_preparado 
+SELECT idanuncioonline, SUBSTR(titulo, 2, LENGTH(titulo) - 2) as titulo, descricao, custo_total FROM anuncio_preparado 
 WHERE titulo LIKE '% grow %'
 ```
 
 ```
 WITH anuncio_preparado as (
-	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total FROM public.anuncioonline
+	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total
+	FROM public.anuncioonline
 )
-SELECT idanuncioonline, SUBSTR(titulo, 2, LENGTH(titulo) - 2), descricao, custo_total FROM anuncio_preparado 
+SELECT idanuncioonline, SUBSTR(titulo, 2, LENGTH(titulo) - 2) as titulo, descricao, custo_total FROM anuncio_preparado 
 WHERE titulo LIKE '% matrix %'
 ```
 
