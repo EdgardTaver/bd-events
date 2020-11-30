@@ -8,8 +8,10 @@ O time de Finanças deseja realizar a conciliação bancária dos custos dos eve
 
 ## SQL
 
-```
-SELECT SUM(contasapagar.valor) AS custo_total, tema, nome, edicao FROM contasapagar
+```sql
+SELECT SUM(contasapagar.valor) AS custo_total,
+       evento.tema, evento.nome, evento.edicao
+FROM contasapagar
 RIGHT JOIN evento ON contasapagar.fk_evento_idevento = evento.idevento
 GROUP BY evento.idevento
 ```
@@ -30,9 +32,9 @@ custo_total|tema                 |nome                                          
 -----------|---------------------|-----------------------------------------------|------|
 36230.86   |Consumer Non-Durables|Triple-buffered bandwidth-monitored utilisation|2019  |
 9676.74    |Public Utilities     |Vision-oriented bandwidth-monitored capacity   |2020  |
-           |Basic Industries     |Upgradable multimedia time-frame               |2019  |
+`null`     |Basic Industries     |Upgradable multimedia time-frame               |2019  |
 18351.42   |Consumer Services    |Front-line zero tolerance archive              |2019  |
-           |Finance              |Automated full-range protocol                  |2019  |
+`null`     |Finance              |Automated full-range protocol                  |2019  |
 7984.06    |Health Care          |Cloned attitude-oriented encoding              |2019  |
 2169.87    |Health Care          |Synchronised national task-force               |2020  |
 3982.15    |Consumer Services    |Organic intermediate adapter                   |2019  |
