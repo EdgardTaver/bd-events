@@ -1,0 +1,65 @@
+# Consulta 2
+
+## Enunciado
+
+O time de RH quer saber os dados dos principais membros que atuam tanto nos bastidores como na linha de frente dos eventos. Estes membros irão receber mensagens de voz parabenizando-os pelos esforços em prol dos eventos.
+
+Para isso, eles precisam do nome e telefone das pessoas que atuaram no evento nas funções de "staff", "organizador" ou "participante do comitê".
+
+---
+
+## SQL
+
+```
+SELECT papel.idpapel, papel.funcao, pessoa.nome, pessoa.telefone FROM papel 
+INNER JOIN pessoa ON papel.fk_pessoa_idpessoa = pessoa.idpessoa
+WHERE funcao IN ('staff', 'organizador', 'participante do comitê')
+```
+
+---
+
+## Resultados esperados
+
+A tabela `papel` está populada com 128 tuplas, portanto com IDs de 1 até 128. Como são muitas tuplas, não vamos colocá-las aqui no arquivo (elas serão demonstradas no vídeo).
+
+Temos 33 tuplas cujo valor `funcao` é "staff", "organizador" ou "participante do comitê". Não queremos nenhuma tupla que possua alguma `funcao` diferente destas (são 95 tuplas não desejadas).
+
+Para obter `nome` e `telefone`, fazemos uma busca na tabela `pessoa` a partir da chave estrangeira presente em `papel`.
+
+O resultado final deve ser este:
+
+idpapel|funcao                |nome                 |telefone         |
+-------|----------------------|---------------------|-----------------|
+1      |staff                 |Alyson Fawley        |+55(83)98316-4101|
+2      |organizador           |Dorey Rennie         |+55(60)91674-0975|
+5      |staff                 |Starlin Oakland      |+55(93)99277-3344|
+11     |organizador           |Killy Fitzhenry      |+55(87)93882-8935|
+17     |participante do comitê|Fritz Sewill         |+55(83)92709-6166|
+18     |organizador           |Aguie Jakobssen      |+55(09)95222-4353|
+24     |participante do comitê|Nesta Treweela       |+55(23)94950-5743|
+27     |organizador           |Jacky Markwell       |+55(76)98148-1257|
+29     |organizador           |Marna Wootton        |+55(08)91997-4574|
+30     |staff                 |Nils Nolleau         |+55(94)92574-2870|
+38     |organizador           |Berte Sisnett        |+55(91)99145-5759|
+39     |organizador           |Marne Parlor         |+55(62)94490-1535|
+44     |participante do comitê|Antonetta Ewart      |+55(51)95632-3229|
+50     |organizador           |Arley Evangelinos    |+55(48)91161-7649|
+51     |participante do comitê|Hubey Collens        |+55(79)95432-7706|
+54     |staff                 |Emmy Edgin           |+55(61)94874-7213|
+55     |organizador           |Harrietta Vidineev   |+55(84)96406-3800|
+58     |staff                 |Lavina Crucitti      |+55(12)92486-5538|
+59     |staff                 |Ruby Kingsland       |+55(86)98184-9666|
+64     |staff                 |Annamaria Edinborough|+55(28)93449-7391|
+74     |organizador           |Duncan Foyster       |+55(94)92099-2114|
+80     |organizador           |Miguel Laise         |+55(03)93345-0070|
+92     |staff                 |Jacky Markwell       |+55(76)98148-1257|
+96     |staff                 |Leesa McPike         |+55(19)96215-0639|
+101    |staff                 |Cirilo Sackett       |+55(17)91983-9753|
+105    |organizador           |Freedman Gethouse    |+55(42)93449-6778|
+111    |staff                 |Janella Elfleet      |+55(05)97588-5103|
+112    |organizador           |Wang Seivwright      |+55(67)99629-0801|
+113    |participante do comitê|Laurene Godsal       |+55(30)98096-0364|
+120    |participante do comitê|Harrietta Vidineev   |+55(84)96406-3800|
+121    |staff                 |Sylvester Cuttell    |+55(46)92071-6384|
+122    |organizador           |Cece Gildersleeve    |+55(98)97420-4322|
+128    |staff                 |Melinde Tittletross  |+55(82)99878-6986|

@@ -1,0 +1,54 @@
+# Consulta 4
+
+## Enunciado
+
+Uma pessoa pode dividir o pagamento de seu ingresso ou patrocínio (entidade `taxa`) em 2 ou mais formas de pagamento. É possível pagar uma parte no cartão e outra no boleto, por exemplo. Porém, a processadora de pagamentos cobra porcentagens maiores quando essa divisão ocorre. Ou seja: para o Evento, é mais caro permitir a compra com 2 ou mais formas de pagamento.
+
+Para analisar se os custos maiores realmente fazem sentido, o time de Operações deseja saber o quão frequentemente essa opção de pagamento é realizada. Para isos, eles desejam saber todas as transações que foram pagas com 2 ou mais formas de pagamento. No relatório, deve constar também o número de formas de pagamento que foram usadas.
+
+---
+
+## SQL
+
+```
+WITH pagamentos_agg AS (
+	SELECT fk_transacao_idtransacao, COUNT(*) AS count_pagamentos FROM pagamento
+	GROUP BY fk_transacao_idtransacao
+	HAVING COUNT(*) > 1
+)
+SELECT t.*, p.count_pagamentos FROM transacao t
+INNER JOIN pagamentos_agg p ON t.idtransacao = p.fk_transacao_idtransacao
+```
+
+---
+
+## Resultados esperados
+
+A tabela `transacao` possui 65 tuplas. Todas essas tuplas possuem de 1 a n formas de pagamento, que estão na tabela `pagamento`, esta que possui 90 tuplas.
+
+Na tabela `pagamento`, temos a chave estrangeira para `transacao`. Quando essa chave se repete, significa que temos mais de um pagamento atendendo à mesma transação.
+
+O resultado final deve ser este:
+
+idtransacao|valortotal|statustransacao|fk_pessoa_idpessoa|count_pagamentos|
+-----------|----------|---------------|------------------|----------------|
+23         |   3025.98|COMPLETED      |                10|               4|
+7          |   1234.21|COMPLETED      |                23|               3|
+20         |  10401.52|COMPLETED      |                 3|               3|
+41         |   1024.12|COMPLETED      |                18|               3|
+26         |   2026.95|COMPLETED      |                29|               2|
+27         |   5267.31|COMPLETED      |                 6|               2|
+28         |   5696.09|COMPLETED      |                10|               2|
+34         |  11039.38|COMPLETED      |                30|               2|
+37         |   3108.46|COMPLETED      |                18|               2|
+38         |  10127.82|COMPLETED      |                 8|               2|
+40         |   5604.48|COMPLETED      |                11|               2|
+43         |   1665.03|COMPLETED      |                 8|               2|
+48         |   4162.44|COMPLETED      |                21|               2|
+58         |   9852.78|COMPLETED      |                25|               2|
+63         |  10173.76|COMPLETED      |                 8|               2|
+4          |   9670.44|COMPLETED      |                 3|               2|
+64         |   8397.73|COMPLETED      |                14|               2|
+11         |   4384.96|COMPLETED      |                18|               2|
+13         |   8283.73|COMPLETED      |                22|               2|
+24         |   5570.05|COMPLETED      |                 6|               2|

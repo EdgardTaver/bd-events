@@ -1,0 +1,51 @@
+# Consulta 7
+
+## Enunciado
+
+O time de Mídias Sociais deseja divulgar as redes sociais dos Eventos da edição de 2020. Porém, o dia em que foi planejado fazer essa divulgação era 28 de julho, que por acaso é o Dia da Independência do Peru. Desta forma, o time não queria deixar de homenagear o país. Por este motivo, eles também querem saber todos os Grupos Musicas registrados cujo país de origem é o Peru.
+
+Cada divulgação terá um tema. No relatório final gerado pela consulta, este tema será ou o país de origem do Grupo Musical, ou então o tema do próprio Evento. É interessante também saber o nome do Evento ou do Grupo Musical, e também o número de seguidores que cada rede social tem.
+
+---
+
+## SQL
+
+```sql
+SELECT
+	p.nome as rede_social, p.url, p.seguidores,
+	CASE WHEN e.nome IS NOT NULL THEN e.nome
+		ELSE g.nome END AS nome,
+	CASE WHEN e.tema IS NOT NULL then e.tema
+		ELSE g.origem END AS tema
+FROM perfilredesocial p
+LEFT JOIN evento e ON p.fk_evento_idevento = e.idevento
+LEFT JOIN grupomusical g ON p.fk_grupomusical_idgrupomusical = g.idgrupomusical
+WHERE e.edicao = '2020' OR g.origem = 'Peru'
+```
+
+---
+
+## Resultados esperados
+
+A tabela `perfilredesocial` possui 50 tuplas, estas que podem ou não pertencer a Eventos de 2020, ou então pertencer a Grupos Musicais do Peru.
+
+A tabela `evento` possui 3 tuplas cujo valor de `edicao` é 2020. A tabela `grupomusical` possui 2 tuplas cujo valor de `origem` é Peru.
+
+Como cada `evento` ou `grupomusical` pode possuir de 0 a n redes sociais, é possível que os Eventos e Grupos Musicais ou não possuam redes sociais, ou possuam mais de uma rede social. Desta forma, podemos esperar um resultado com mais do que 5 tuplas.
+
+O resultado final esperado é:
+
+rede_social|url                                                                 |seguidores|nome                                        |tema            |
+-----------|--------------------------------------------------------------------|----------|--------------------------------------------|----------------|
+Flexidy    |http://netscape.com/in/purus/eu/magna/vulputate.jpg                 |      3264|Synchronised national task-force            |Health Care     |
+Regrant    |https://wsj.com/ridiculus/mus/etiam/vel/augue/vestibulum/rutrum.html|     11441|Synchronised national task-force            |Health Care     |
+Flexidy    |https://usatoday.com/erat/curabitur/gravida/nisi/at/nibh/in.html    |      6963|Open-source holistic installation           |Finance         |
+Ronstring  |http://google.ru/risus/praesent/lectus/vestibulum/quam/sapien.js    |      1925|Open-source holistic installation           |Finance         |
+Veribet    |https://phpbb.com/orci/pede.jpg                                     |      9804|Synchronised national task-force            |Health Care     |
+Voltsillam |http://addtoany.com/vestibulum/eget/vulputate.html                  |     12034|Vision-oriented bandwidth-monitored capacity|Public Utilities|
+Daltfresh  |https://loc.gov/sagittis/nam/congue/risus/semper/porta/volutpat.html|      4976|Vision-oriented bandwidth-monitored capacity|Public Utilities|
+Konklab    |http://xing.com/elementum/ligula/vehicula.json                      |      6643|CARBON DIOXIDE                              |Peru            |
+Zathin     |https://ibm.com/aliquam/augue/quam/sollicitudin.xml                 |     11730|Amlodipine besylate and Atorvastatin calcium|Peru            |
+Tres-Zap   |https://tiny.cc/nulla/suspendisse/potenti/cras/in/purus/eu.xml      |      7789|Amlodipine besylate and Atorvastatin calcium|Peru            |
+Redhold    |http://privacy.gov.au/id/justo.html                                 |      2115|Amlodipine besylate and Atorvastatin calcium|Peru            |
+Treeflex   |http://edublogs.org/dui/luctus/rutrum/nulla/tellus/in/sagittis.png  |     10839|Amlodipine besylate and Atorvastatin calcium|Peru            |

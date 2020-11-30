@@ -1,0 +1,38 @@
+# Consulta 5
+
+## Enunciado
+
+O time de Organização precisa dimensionar e planejar o evento de forma a atender os pacotes de benefícios concedidos às entidades por meio de patrocínios. Para isso, eles precisam de um relatório que informe quais pacotes foram adquiridos, e quais são as entidades que estão sujeitas a eles. O relatório deve conter dados de contato das entidades, para que o time possa conversar com a entidade e fazer combinados prévios, se necessário.
+
+---
+
+## SQL
+
+```
+SELECT e.nome, e.telefone, e.email, p2.tipo, p2.classe FROM entidade e
+INNER JOIN compostapor1 c ON c.fk_entidade_identidade = e.identidade
+INNER JOIN pessoa p ON c.fk_pessoa_idpessoa = p.idpessoa
+INNER JOIN transacao t ON t.fk_pessoa_idpessoa = p.idpessoa
+INNER JOIN taxa t2 ON t2.fk_transacao_idtransacao = t.idtransacao
+INNER JOIN taxaempresa t3 ON t3.fk_taxa_idtaxa = t2.idtaxa 
+INNER JOIN pacote p2 ON t3.fk_pacote_idpacote = p2.idpacote 
+```
+
+---
+
+## Resultados esperados
+
+Obter os pacotes de benefícios das entidades representa um dos maiores caminhos possíveis no nosso modelo, pois é necessário atravessar vários relacionamentos.
+
+Para que uma `Entidade` possa patrocionar o evento, uma das Pessoas que a compõe deve realizar a `Transação` de uma `Taxa Empresa` (a `Taxa Empresa` é uma especialização de `Taxa`)
+
+O resultado final deve ser este:
+
+nome      |telefone         |email                     |tipo         |classe         |
+----------|-----------------|--------------------------|-------------|---------------|
+Fix San   |+55(70)97017-1112|gmullineux6@npr.org       |comercial    |Newton (Bronze)|
+Greenlam  |+55(79)96535-4969|dgoodieg@elegantthemes.com|institucional|Einstein (Gold)|
+Bitchip   |+55(76)92538-2873|mcoada@discuz.net         |institucional|Einstein (Gold)|
+Bitchip   |+55(76)92538-2873|mcoada@discuz.net         |institucional|Curie (Silver) |
+Bitchip   |+55(76)92538-2873|mcoada@discuz.net         |comercial    |Newton (Bronze)|
+Stronghold|+55(71)96234-0877|vreddish8@salon.com       |institucional|Newton (Bronze)|
