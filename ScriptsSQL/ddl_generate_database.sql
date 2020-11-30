@@ -1,5 +1,3 @@
-/* LogicoGeradorSQL: */
-
 CREATE TABLE Evento (
     idEvento SERIAL PRIMARY KEY,
     Tema VARCHAR,
