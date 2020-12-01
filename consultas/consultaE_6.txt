@@ -1,5 +1,14 @@
 # Consulta 6
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
 ## Enunciado
 
 O Comitê Organizador deseja ter uma relação dos participantes e dos juízes de cada um dos concursos realizados. Eles precisam saber o e-mail destas pessoas, para poder mandar uma comunicação personalizada agradecendo pela participação no concurso.
@@ -8,7 +17,7 @@ O Comitê Organizador deseja ter uma relação dos participantes e dos juízes d
 
 ## SQL
 
-```
+```sql
 WITH
 participantes AS (
 SELECT c.fk_atividade_idatividade as concurso_id, c.tema, p2.nome as participante, p2.email as participante_email FROM concurso c

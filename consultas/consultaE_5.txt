@@ -1,5 +1,14 @@
 # Consulta 5
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
 ## Enunciado
 
 O time de Organização precisa dimensionar e planejar o evento de forma a atender os pacotes de benefícios concedidos às entidades por meio de patrocínios. Para isso, eles precisam de um relatório que informe quais pacotes foram adquiridos, e quais são as entidades que estão sujeitas a eles. O relatório deve conter dados de contato das entidades, para que o time possa conversar com a entidade e fazer combinados prévios, se necessário.
@@ -8,7 +17,7 @@ O time de Organização precisa dimensionar e planejar o evento de forma a atend
 
 ## SQL
 
-```
+```sql
 SELECT e.nome, e.telefone, e.email, p2.tipo, p2.classe FROM entidade e
 INNER JOIN compostapor1 c ON c.fk_entidade_identidade = e.identidade
 INNER JOIN pessoa p ON c.fk_pessoa_idpessoa = p.idpessoa

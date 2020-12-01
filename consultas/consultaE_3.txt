@@ -1,5 +1,14 @@
 # Consulta 3
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
 ## Enunciado
 
 O time de Finanças deseja realizar a conciliação bancária dos custos dos eventos. Para isso, eles precisam da soma das contas a pagar de todos os eventos. O relatório deve, inclusive, conter eventos que podem não possuir contas a pagar registradas.
