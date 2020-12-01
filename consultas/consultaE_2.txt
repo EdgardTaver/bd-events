@@ -1,5 +1,14 @@
 # Consulta 2
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
 ## Enunciado
 
 O time de RH quer saber os dados dos principais membros que atuam tanto nos bastidores como na linha de frente dos eventos. Estes membros irão receber mensagens de voz parabenizando-os pelos esforços em prol dos eventos.
@@ -10,7 +19,7 @@ Para isso, eles precisam do nome e telefone das pessoas que atuaram no evento na
 
 ## SQL
 
-```
+```sql
 SELECT papel.idpapel, papel.funcao, pessoa.nome, pessoa.telefone FROM papel 
 INNER JOIN pessoa ON papel.fk_pessoa_idpessoa = pessoa.idpessoa
 WHERE funcao IN ('staff', 'organizador', 'participante do comitê')

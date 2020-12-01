@@ -1,5 +1,14 @@
 # Consulta 7
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
 ## Enunciado
 
 O time de Mídias Sociais deseja divulgar as redes sociais dos Eventos da edição de 2020. Porém, o dia em que foi planejado fazer essa divulgação era 28 de julho, que por acaso é o Dia da Independência do Peru. Desta forma, o time não queria deixar de homenagear o país. Por este motivo, eles também querem saber todos os Grupos Musicas registrados cujo país de origem é o Peru.

@@ -1,5 +1,14 @@
 # Consulta 1
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
 ## Enunciado
 
 O time de Marketing do Evento quer analisar as melhores palavras para colocar nos anúncios. Para isso, eles gostariam de saber o custo total de anúncios que contém uma determina palavra ou expressão no título.
@@ -10,7 +19,7 @@ O time de Marketing do Evento quer analisar as melhores palavras para colocar no
 
 Para, por exemplo, pegar anúncios que contenham a palavra `cultivate`:
 
-```
+```sql
 WITH anuncio_preparado as (
 	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total
 	FROM public.anuncioonline
@@ -21,7 +30,7 @@ WHERE titulo LIKE '% cultivate %'
 
 É possível mudar o trecho `% cultivate %` para qualquer outra palavra diferente de `vision`. Exemplos:
 
-```
+```sql
 WITH anuncio_preparado as (
 	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total
 	FROM public.anuncioonline
@@ -30,7 +39,7 @@ SELECT idanuncioonline, SUBSTR(titulo, 2, LENGTH(titulo) - 2) as titulo, descric
 WHERE titulo LIKE '% grow %'
 ```
 
-```
+```sql
 WITH anuncio_preparado as (
 	SELECT idanuncioonline, CONCAT(' ', titulo, ' ') as titulo, descricao, custoporclique * acessos as custo_total
 	FROM public.anuncioonline

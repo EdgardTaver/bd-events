@@ -1,5 +1,14 @@
 # Consulta 4
 
+SI - Banco de Dados  
+Novembro, 2020
+
+Nome                           | Nr. USP
+-------------------------------|---------
+Edgard van Tol Taver           | 10686575
+Guilherme Vaz de Sousa Ribeiro | 10300320
+Pedro Raul Taborga da Costa    | 4537076
+
 ## Enunciado
 
 Uma pessoa pode dividir o pagamento de seu ingresso ou patrocínio (entidade `taxa`) em 2 ou mais formas de pagamento. É possível pagar uma parte no cartão e outra no boleto, por exemplo. Porém, a processadora de pagamentos cobra porcentagens maiores quando essa divisão ocorre. Ou seja: para o Evento, é mais caro permitir a compra com 2 ou mais formas de pagamento.
@@ -10,7 +19,7 @@ Para analisar se os custos maiores realmente fazem sentido, o time de Operaçõe
 
 ## SQL
 
-```
+```sql
 WITH pagamentos_agg AS (
 	SELECT fk_transacao_idtransacao, COUNT(*) AS count_pagamentos FROM pagamento
 	GROUP BY fk_transacao_idtransacao
