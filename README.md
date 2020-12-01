@@ -13,7 +13,7 @@
 - [ ] Refazer e reenviar modelos lógicos e relacional.
 - [ ] Documentar as edições feitas na conversão do BR Modelo para os scripts SQL usados de fato.
 - [ ] CRUD.
-- [ ] CRUD em vídeo.
+- [X] CRUD em vídeo.
 
 ## Bot
 
