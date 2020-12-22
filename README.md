@@ -10,9 +10,9 @@
 - [X] Comandos DML de inserção de dados nas tabelas.
 - [X] Cada consulta com o seu enunciado e resolução em SQL deve estar em um arquivo TXT conforme solicitado na especificação do trabalho.
 - [X] Consulta em vídeo.
-- [ ] Refazer e reenviar modelos lógicos e relacional.
-- [ ] Documentar as edições feitas na conversão do BR Modelo para os scripts SQL usados de fato.
-- [ ] CRUD.
+- [X] Refazer e reenviar modelos lógicos e relacional.
+- [X] Documentar as edições feitas na conversão do BR Modelo para os scripts SQL usados de fato.
+- [X] CRUD.
 - [X] CRUD em vídeo.
 
 ## Bot
